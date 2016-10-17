@@ -1,0 +1,738 @@
+#intersection-status-view {
+    .content {
+        top: 64px;
+    }    
+    .channel-light-status {
+        width: 800px;
+        height: 153px;
+        .channel-status-bar {
+            background-color: #343536;
+            height: 17px;
+        }    
+        .status-label {
+            text-transform: uppercase;
+            font-size: 12px;
+            left: 22px;
+            position: absolute;
+            top: 1px;
+            width: 128px;
+            color: #ffffff;
+        }    
+            .values {
+                clear: both;
+                position: absolute;
+                left: 28px;
+                top: 38px;
+                ul {
+                    height: 30px;
+                    overflow: hidden;
+                    li {
+                        margin-right: 5px;
+                        div {
+                            background: url('img/icon-bb-channel-light-off.png') no-repeat center center;
+                            width: 30px;
+                            height: 30px;
+                            text-align: center;
+                            position: relative;
+                        
+                         //   opacity: 0.25;                            
+                            // span {
+                            //     display: block;
+                            //     width: 16px;
+                            //     height: 16px;
+                            //     position: absolute;
+                            //     top: 8px;
+                            //     left: 8px;
+                            // }    
+                        // &.rd {
+                        //     opacity: 1;
+                        //     span {
+                        //         background-color: @red-color;
+                        //     }   
+                        //   }                            
+                        // &.gr {
+                        //     opacity: 1;
+                        //     span {
+                        //         background-color: @green-color;
+                        //         width: 18px;
+                        //         height: 18px;
+                        //         top: 2px;
+                        //         left: 4px;
+                        //         border: 2px solid black; 
+                        //     }   
+                        //   }
+                        &.am {
+                            opacity: 1;
+                            span {
+                                background-color: @amber-color;
+                                width: 20px;
+                                height: 20px;
+                                top: 2px;
+                                left: 6px;
+                                border: 2px solid black; 
+                            }    
+                          } 
+                        &.rd-term {
+                            opacity: 1;
+                            span {
+                                background-color: @red-color;
+                                width: 20px;
+                                height: 20px;
+                                top: 10px;
+                                left: 6px;
+                                border: 2px solid black; 
+                            }    
+                          }                           
+
+
+                        
+                        }
+   
+                    }
+
+                    &.row-1 {
+                        .on  { 
+                            background: url('img/icon-bb-channel-status-red.png') no-repeat center center; 
+                        }   
+                    }  
+                    &.row-2 {
+                        .on  { background: url('img/icon-bb-channel-status-yellow.png') no-repeat center center; }   
+                    }
+                    &.row-3 {
+                        .on  { background: url('img/icon-bb-channel-status-green.png') no-repeat center center; }   
+                    }                      
+                }
+            }
+            .label {
+                font-family: 'Lato';
+                clear: both;
+                position: absolute;
+                top: 20px;
+                left: 28px;
+                ul {
+                    li {
+                        margin-right: 5px;
+                        div {
+                             width: 30px;
+                            height: 20px;
+                            text-align: center; 
+                            font-size: 14px;
+                            margin-top: 1px;
+                        }    
+                    }    
+  
+                }
+            }                
+    } 
+    .state-status {
+        position: absolute;
+        width: 480px;
+        left: 288px;
+        .state {
+            position: absolute;
+            top: 8px;
+            .phase {
+                width: 510px;
+                float: left;
+                margin-bottom: 6px;
+                &.phase-2 {
+                 //   margin-top: 30px;   
+                }    
+                .phase-value {
+                    background: url('img/icon-bb-active-phase-bg.png') no-repeat center center; 
+                    width: 34px;
+                    float: left;
+                    text-align: right;
+                    padding-right: 5px;
+                    color: #ffffff;
+                    height: 22px;
+                    line-height: 18px;
+                    font-size: 16px;
+                    span {
+                       width: 34px;
+                       height: 22px;
+                       display: block;
+                    }    
+                    &.phase-value-1, &.phase-value-2 {
+                        // font-size: 48px;   
+                        // position: absolute;
+                        // top: -20px;
+                        // margin-left: 10px;
+                    }    
+                }    
+                .phase-graph {
+                    width: 110px;
+                    float: left;
+                    > div {
+                         height: 10px;
+                    }    
+                   
+                }  
+                    .status-times {
+                        ul {
+                            li {
+                               background: url('img/icon-bb-status-gauge.png') center center no-repeat;    
+                                color: #ffffff;
+                                font-size: 10px;
+                                text-transform: uppercase;
+                                margin-left: 6px;
+                            }    
+                        }    
+                        font-size: 8px;
+                        .min-time, .max-time, .gap-time, .amb-time, .red-time {
+                            width: 149px;
+                            height: 20px;  
+                            margin-top: 2px;
+                            .phase {
+                                
+                                position: absolute;
+                                &.phase-2 {
+                                //    top: 145px;
+                                }    
+                                .time-label {
+                                    width: 50px;
+                                    float: left;
+                                }
+                                .phase-value {
+                                    width: 40px;
+                                    float: left;
+                                    padding-right: 10px;
+                                }    
+                                .phase-graph {
+                                    width: 100px;
+                                    float: left;
+                             //       background-color: #808080;
+                             //       height: 10px;
+                                     div {
+                                     //   background-color: #808080;   
+                                        height: 10px;
+                                    }    
+                                }
+                            .phase-total {
+                                width: 32px;
+                                text-align: center;
+                                height: 16px;
+                                line-height: 16px;
+                                float: left;
+                            }                                 
+                            }
+                            .time-label {
+                                width: 34px;
+                                float: left;
+                                text-indent: 10px;
+                                height: 16px;
+                                line-height: 19px;
+                            }
+                            .phase-graph {
+                                width: 81px; 
+                                margin-top: 4px;
+                                 div {  
+                                    height: 12px;
+                                }    
+                            }
+                            .phase-total {
+                                width: 32px;
+                                text-align: center;
+                                height: 16px;
+                                line-height: 18px;
+                                float: left;
+                            }    
+                        }
+   
+        }                      
+            }
+        }    
+        .status-label {
+            text-transform: uppercase;
+            font-size: 14px;
+            padding: 5px;
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            width: 100px;
+            display: none;
+        }  
+    }
+    
+    .vehicle-phase-label {
+        height: 17px;
+        width: 100%;
+        background-color: #343536;
+        position: absolute;
+        top: 136px;
+        color: #ffffff;
+        text-indent: 24px;
+        font-size: 12px;
+        text-transform: uppercase;
+        line-height: 17px;
+    }    
+ 
+    .vehicle-phase-calls {
+        width: 460px;
+        position: absolute;
+        top: 162px;
+        ul {
+            margin-left: 26px;
+            li {
+                background: url('img/icon-bb-status-phase-off.png') no-repeat center center; 
+                margin-right: 5px;
+                margin-bottom: 5px;
+                width: 26px;
+                height: 48px;
+                &.called {
+                        .call {
+                            background: url('img/icon-bb-status-phase-call-on.png') no-repeat center center; 
+                        }    
+                    }                  
+                &.max {
+                    span {
+                        font-size: 8px;
+                        text-transform: uppercase;
+                    }    
+                     span::after {
+                         content: "max";   
+                     }     
+                }
+                &.min {
+                    span {
+                        font-size: 8px;
+                        text-transform: uppercase;
+                    }    
+                    span::after {
+                         content: "min";   
+                    }  
+                } 
+                    &.soft {
+                        span {
+                            font-size: 8px;
+                            text-transform: uppercase;
+                        }    
+                         span::after {
+                             content: "soft";   
+                         }  
+                    }                        
+                    &.on  {
+                        background: url('img/icon-bb-status-phase-on.png') no-repeat center center; 
+                        color: #ffffff;
+                        span {
+                            color: #ffffff;
+                        }            
+                    } 
+                    &.next  {
+                        background: url('img/icon-bb-status-phase-next.png') no-repeat center center; 
+                    }                
+                > div {
+                    width: 100%;
+                    height:35px;
+                    line-height: 48px;
+                    text-align: center;
+                    
+
+                    &.call {
+                        position: absolute;
+                        height: 10px;
+                        width: 26px;
+                    }    
+                    
+                    
+                }
+                 > span {
+                   display: block;
+                   width: 100%;
+                   text-align: center;
+                }    
+            float: left;
+               
+            }    
+        }    
+    }
+
+    .ped-phase-label {
+        height: 17px;
+        width: 100%;
+        background-color: #343536;
+        position: absolute;
+        top: 219px;
+        color: #ffffff;
+        text-indent: 24px;
+        font-size: 12px;
+        text-transform: uppercase;
+        line-height: 17px;
+    }     
+    
+    .ped-phase-calls {
+        position: absolute;
+        top: 243px;
+        width: 300px;
+        .status-label {
+            text-transform: uppercase;
+            font-size: 14px;
+            padding: 5px;
+            width: 80px;
+        }  
+        ul {
+            position: absolute;
+            top: 0px;
+            margin-left: 26px;
+            li {
+                background: url('img/icon-bb-status-phase-off.png') no-repeat center center; 
+                margin-right: 5px;
+                margin-bottom: 5px;
+                width: 26px;
+                height: 48px;   
+                    &.called {
+                        .call {
+                            background: url('img/icon-bb-status-phase-call-on.png') no-repeat center center; 
+                            height: 10px;
+                            width: 26px;
+                            position: absolute;
+                        }    
+                    }                          
+                    &.on  {
+                        background: url('img/icon-bb-status-phase-on.png') no-repeat center center; 
+                        color: #ffffff;
+                        span {
+                            color: #ffffff;
+                        }            
+                    } 
+                    &.next  {
+                        background: url('img/icon-bb-status-phase-next.png') no-repeat center center; 
+                    }                    
+                
+                > div.value {
+                    text-align: center;
+                    line-height: 48px;
+                    height: 35px;
+                
+                }
+                > div.call {
+               //     display: none;               
+                
+                }
+                 > span {
+                   display: block;
+                   width: 100%;
+                   text-align: center;
+                }    
+            float: left;
+            
+            .riw {
+                display: block;
+                font-size: 12px;
+            }
+            .na {
+                display: block;
+                font-size: 12px;
+            }            
+            }    
+        }         
+    
+    }  
+    .overlap-phase-calls {
+        position: absolute;
+        top: 314px;
+        width: 300px;
+        .status-label {
+            text-transform: uppercase;
+            font-size: 14px;
+            padding: 5px;
+            width: 100px;
+        }  
+        ul {
+            position: absolute;
+            left: 26px;
+            width: 320px;
+            li {
+                background: url('img/icon-bb-status-overlap-off.png') no-repeat center center; 
+                margin-right: 5px;
+                width: 26px;
+                &.on  {
+                        background: url('img/icon-bb-status-overlap-on.png') no-repeat center center; 
+                        color: #ffffff;
+                        span {
+                            color: #ffffff;
+                        }            
+                }        
+                &.next  {
+                        background: url('img/icon-bb-status-overlap-next.png') no-repeat center center; 
+                    }
+                > div {
+                    width: 100%;
+                    line-height: 35px;
+                    text-align: center;
+                }                     
+            }    
+        }             
+    }  
+    .ped-status-times {
+            position: absolute;
+            top: 241px;
+            width: 500px;
+            left: 286px;
+            font-size: 16px;
+            > div {
+                height: 28px;   
+            }    
+            
+            .phase-num {
+                background: url('img/icon-bb-active-phase-bg.png') no-repeat center center;
+                width: 34px;
+                float: left;
+                text-align: right;
+                padding-right: 5px;
+                color: #ffffff;
+                height: 22px;
+                line-height: 18px;
+                font-size: 16px;
+            }    
+            
+            .walk-time, .rest-walk-time, .clear-time {
+                width: 200px;
+                height: 20px;
+                margin-top: 2px;
+                            > div {
+                                height: 20px;  
+                                width: 148px;
+                                background: url('img/icon-bb-status-gauge.png') center center no-repeat;                                
+                                color: #ffffff;
+                                margin-left: 46px;
+                            }    
+                            .phase-num {
+                            
+                            }    
+                            .time-label {
+                                width: 46px;
+                                float: left;
+                                font-size: 12px;
+                                text-transform: uppercase;
+                                line-height: 20px;
+                                text-align: left;
+                                text-indent: 6px;
+                            }
+                            .phase-value {
+                                width: 30px;
+                                float: left;
+                                text-indent: 10px;
+                                height: 16px;
+                                line-height: 19px;  
+                                font-size: 10px;
+                            }    
+                            .phase-graph {
+                                width: 84px;
+                                margin-top: 4px;
+                                float: left;
+                                > div {
+                                 height: 12px;
+                                 //background: url('img/icon-bb-gauge-yellow.png') repeat
+                                }    
+                            }
+                            .phase-total {
+                                width: 29px;
+                                text-align: center;
+                                height: 16px;
+                                line-height: 16px;
+                                float: left;
+                                font-size: 10px;
+                                color: #ffffff;                                
+                            }   
+                        }
+
+     
+        }       
+    .variable-info {
+          position: absolute;
+          width: 193px;
+          height: 119px;
+          border-left: 1px solid #666666;
+          left: 605px;
+          top: 16px;
+    }  
+    .overlap-phase-label {
+        height: 17px;
+        width: 100%;
+        background-color: #343536;
+        position: absolute;
+        top: 296px;
+        color: #ffffff;
+        text-indent: 24px;
+        font-size: 12px;
+        text-transform: uppercase;
+        line-height: 17px;
+    }       
+    .overlap-status-times {
+          position: absolute;
+          top: 314px;
+          left: 286px;
+          width: 500px;
+          
+            > div {
+                height: 28px;   
+            }    
+            
+            .phase-num {
+                background: url('img/icon-bb-active-phase-bg.png') no-repeat center center;
+                width: 34px;
+                float: left;
+                text-align: right;
+                padding-right: 5px;
+                color: #ffffff;
+                height: 22px;
+                line-height: 18px;
+                font-size: 16px;
+            }    
+          
+        .min-time, .ext-time{
+                       //     display: none;
+                            width: 81px;
+                            height: 20px;
+
+                            .phase-num {
+                                width: 40px;
+                                float: left;
+                            }    
+                            .time-label {
+                                width: 40px;
+                                float: left;
+                            }
+                            .phase-value {
+                                width: 30px;
+                                float: left;
+                                padding-right: 5px;
+                            }    
+                            .phase-graph {
+                                width: 40px; 
+                                margin-top: 4px;
+                                float: left;
+                                > div {
+                                 height: 11px;
+                                 //background-color: @green-color;
+                                 background-color: #000000;
+                                }    
+                            }
+                            .phase-total {
+                                width: 32px;
+                                text-align: center;
+                                height: 16px;
+                                line-height: 16px;
+                                float: left;
+                            }   
+                        }          
+    }    
+
+    #preempt-info {
+        width: 149px;
+        margin-left: 20px;
+        label {
+            font-size: 12px;
+            text-transform: uppercase;
+        }    
+        .values {
+            background: url('img/icon-bb-status-gauge.png') center center no-repeat;
+            height: 20px;
+        .graph {
+            height: 20px;
+            width: 81px; 
+            float: left;
+            .bar {
+                height: 12px;   
+                margin-top: 4px;
+            }    
+        }
+        .total-time {
+            font-size: 10px;
+            float: left;
+            color: #ffffff;
+            width: 34px;
+            text-align: left;
+            text-indent: 6px;
+            margin-top: 3px;
+        }   
+        .time-remaining {
+            font-size: 10px;
+            float: left;
+            color: #ffffff;
+            width: 34px;
+            text-align: left;
+            text-indent: 12px;
+            margin-top: 3px;
+        }
+    }
+}   
+
+    #stop-time {
+        font-size: 12px;
+        text-transform: uppercase;
+        text-indent: 20px;
+        margin-bottom: 5px;
+        margin-top: 10px;
+    }    
+
+.dir-nl {
+  background: transparent url('img/icon-bb-status-north-left.png') no-repeat 2px 4px;
+}
+
+
+.dir-nt {
+ background: transparent url('img/icon-bb-status-north-through.png') no-repeat 6px 2px;   
+}
+
+
+.dir-sl {
+  background: transparent url('img/icon-bb-status-south-left.png') no-repeat 4px 6px;   
+}
+
+
+.dir-st {
+ background: transparent url('img/icon-bb-status-south-through.png') no-repeat 6px 3px; 
+}
+
+.dir-wl {
+ background: transparent url('img/icon-bb-status-west-left.png') no-repeat 4px 4px;  
+}
+
+.dir-wt {
+ background: transparent url('img/icon-bb-status-west-through.png') no-repeat 2px 8px;
+}
+
+.dir-et {
+ background: transparent url('img/icon-bb-status-east-through.png') no-repeat 2px 8px;
+}
+
+.dir-el {
+ background: transparent url('img/icon-bb-status-east-left.png') no-repeat 4px 3px; 
+}
+
+.dir-er {
+ background: transparent url('img/icon-bb-status-east-right.png') no-repeat 4px 3px; 
+}
+
+.dir-wr {
+ background: transparent url('img/icon-bb-status-west-right.png') no-repeat 4px 4px; 
+}
+
+.dir-sr {
+ background: transparent url('img/icon-bb-status-south-right.png') no-repeat 4px 6px; 
+}
+
+.dir-nr {
+ background: transparent url('img/icon-bb-status-north-right.png') no-repeat 2px 4px; 
+}
+
+}
+
+#intersection-status-view .state-status .state .phase .status-times .min-time .phase-graph > div,
+#intersection-status-view .state-status .state .phase .status-times .max-time .phase-graph > div,
+#intersection-status-view .state-status .state .phase .status-times .gap-time .phase-graph > div,
+#intersection-status-view .ped-status-times .walk-time .phase-graph > div
+{
+        background: url('img/icon-bb-gauge-green.png') repeat;   
+    }
+#intersection-status-view .ped-status-times .clear-time .phase-graph > div,
+#intersection-status-view .state-status .state .phase .status-times .red-time .phase-graph > div,
+#intersection-status-view #preempt-info .bar {
+        background: url('img/icon-bb-gauge-red.png') repeat;   
+    }
+#intersection-status-view .state-status .state .phase .status-times .amb-time .phase-graph > div {
+        background: url('img/icon-bb-gauge-yellow.png') repeat;  
+    }    
+    

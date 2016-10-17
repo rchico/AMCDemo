@@ -1,0 +1,27 @@
+#config-detail-home {
+
+    .content {   
+        background-color: @content-background;
+        ul {
+            width: 100%;   
+            li {
+                height: 38px;
+                width: 100%;
+                border-bottom: 1px solid #cccccc;
+                background: #ffffff url('img/icon-menu-more.png') no-repeat 770px center;                 
+                &.inverse {
+                    background-color: @inverse-color;   
+                }
+                &.no-more {
+                    background-image: none;   
+                }    
+                a {
+                    display: block; 
+                    height: 100%;
+                    line-height: 38px;
+                    text-indent: 90px;
+                }    
+            }    
+        }      
+    }    
+}    

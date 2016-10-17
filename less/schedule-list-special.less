@@ -1,0 +1,402 @@
+#schedule-list-special {
+        .overlay.confirm-schedule-delete {
+            .confirm-title {
+                font-size: 30px;
+                position: absolute;
+                top: 120px;
+                left: 40px;
+                width: 720px;
+            }
+            .confirm-subtitle {
+                position: absolute;
+                top: 170px;
+                left: 40px;
+                width: 720px;
+            }
+        }    
+    .overlay.schedule-def {
+        .weekday-selection {
+            position: absolute;
+            left: 100px;
+            top: 100px;
+            
+            label {
+                text-transform: uppercase;
+                font-size: 14px;
+            }
+            
+            div > span {
+                position: absolute;
+                font-size: 42px;
+                left: 20px;
+                top: 25px;
+            }    
+            
+            .increment {
+                left: 130px;
+                top: 15px;
+            } 
+            .decrement {
+                left: 130px;
+                top: 52px;
+            }             
+        }   
+        .start-time-selection {
+            position: absolute;
+            left: 500px;
+            top: 200px;
+            
+            label {
+                text-transform: uppercase;
+                font-size: 14px;
+            }
+            
+            div > span {
+                position: absolute;
+                font-size: 42px;
+                left: 20px;
+                top: 25px;
+            }    
+            
+            .increment {
+                left: 130px;
+                top: 15px;
+            } 
+            .decrement {
+                left: 130px;
+                top: 52px;
+            }           
+            
+            .start-time-hour {
+                .increment, .decrement {
+                    left: 0;   
+                }
+                span {
+                   left: 40px;
+                   text-align: right;
+                   width: 60px;
+                }    
+            }
+            .start-time-min {
+                position: absolute;
+                top: 0;
+                left: 80px;
+                .increment, .decrement {
+                    left: 75px;
+                }                
+                
+            }    
+        }  
+        .start-date-selection {
+            position: absolute;
+            left: 50px;
+            top: 200px;
+            
+            label {
+                text-transform: uppercase;
+                font-size: 14px;
+            }
+            
+            div > span {
+                position: absolute;
+                font-size: 42px;
+                left: 10px;
+                top: 25px;
+                width: 60px;
+                text-align: right;
+            }    
+            
+            .increment {
+                left: 130px;
+                top: 15px;
+            } 
+            .decrement {
+                left: 130px;
+                top: 52px;
+            }           
+            
+            .start-date-year {
+                .increment, .decrement {
+                    left: 0;   
+                }
+                span {
+                   left: 40px;
+                   text-align: right;
+                   width: 60px;
+                }    
+            }
+            .start-date-month {
+                position: absolute;
+                top: 0;
+                left: 140px;
+                .increment, .decrement {
+                    left: 75px;
+                }                
+                
+            } 
+            .start-date-day {
+                position: absolute;
+                top: 0;
+                left: 240px;
+                .increment, .decrement {
+                    left: 75px;
+                }                
+                
+            }              
+        }          
+        .end-time-selection {
+            position: absolute;
+            left: 500px;
+            top: 300px;
+            
+            label {
+                text-transform: uppercase;
+                font-size: 14px;
+            }
+            
+            div > span {
+                position: absolute;
+                font-size: 42px;
+                left: 20px;
+                top: 25px;
+            
+            }    
+            
+            .increment {
+                left: 130px;
+                top: 15px;
+            } 
+            .decrement {
+                left: 130px;
+                top: 52px;
+            }           
+            
+            .end-time-hour {
+                .increment, .decrement {
+                    left: 0;   
+                }
+                span {
+                   left: 40px; 
+                   text-align: right;
+                   width: 60px;
+                }    
+            }
+            .end-time-min {
+                position: absolute;
+                top: 0;
+                left: 80px;
+                .increment, .decrement {
+                    left: 75px;
+                }                
+                
+            }    
+        } 
+        .end-date-selection {
+            position: absolute;
+            left: 50px;
+            top: 300px;
+            
+            label {
+                text-transform: uppercase;
+                font-size: 14px;
+            }
+            
+            div > span {
+                position: absolute;
+                font-size: 42px;
+                left: 10px;
+                top: 25px;
+                width: 60px;
+                text-align: right;                    
+            }    
+            
+            .increment {
+                left: 130px;
+                top: 15px;
+            } 
+            .decrement {
+                left: 130px;
+                top: 52px;
+            }           
+            
+            .end-date-year {
+                .increment, .decrement {
+                    left: 0;   
+                }
+                span {
+                   left: 40px;
+                   text-align: right;
+                   width: 60px;
+                }    
+            }
+            .end-date-month {
+                position: absolute;
+                top: 0;
+                left: 140px;
+                .increment, .decrement {
+                    left: 75px;
+                }                
+                
+            } 
+            .end-date-day {
+                position: absolute;
+                top: 0;
+                left: 240px;
+                .increment, .decrement {
+                    left: 75px;
+                }                
+                
+            }              
+        }          
+        .configuration-selection {
+            position: absolute;
+            left: 90px;
+            top: 80px;
+            
+            label {
+                text-transform: uppercase;
+                font-size: 14px;
+            }
+            
+            div > span {
+                position: absolute;
+                font-size: 42px;
+                left: 60px;
+                top: 25px;
+                width: 600px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }    
+            
+            .increment {
+                left: 10px;
+                top: 15px;
+            } 
+            .decrement {
+                left: 10px;
+                top: 52px;
+            }             
+        }           
+    }    
+
+    .content {  
+        ul {
+            width: 100%;   
+            li {
+                height: 48px;
+                width: 100%;
+                border-bottom: 1px solid #cccccc;
+                background: url('img/icon-menu-more.png') no-repeat 760px center;
+                position: relative;
+                &.no-more {
+                    background-image: none;   
+                }    
+                &.add-new-schedule {
+                    div {
+                        height: 38px;
+                        line-height: 38px;
+                        text-indent: 100px;
+                    }       
+                }    
+                 &.update-schedule {
+                    &.included {
+                        display: block;
+                        &.hide {
+                            display: none;   
+                        }    
+                    }    
+                    &.excluded {
+                        display: none;   
+                    }    
+                }                   
+                &.hide {
+                    display: none;   
+                }                 
+                a {
+                    display: block; 
+                    height: 100%;
+                    line-height: 38px;
+                    text-indent: 90px;
+                    position: relative;
+                }
+               .config-name {
+                    position: absolute;
+                    top: 14px;
+                    left: 300px;
+                    width: 300px;
+                    text-transform: uppercase;
+                    font-size: 16px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;                   
+               } 
+               .start-date-time {
+                    position: absolute;
+                    left: 100px;
+                    font-size: 16px;
+                    top: 4px;   
+                    width: 315px;
+               }  
+               .end-date-time {
+                    position: absolute;
+                    left: 100px;
+                    font-size: 16px;
+                    top: 24px;   
+                    width: 315px;
+               }                 
+               .del-schedule {
+                    position: absolute;
+                    left: 700px;
+                    text-align: center;
+                    width: 40px;
+                    height: 40px;
+                    border: 1px solid #aaaaaa;
+                    line-height: 42px;
+                    top: 3px;
+               }  
+               .status-schedule {
+                    position: absolute;
+                    left: 10px;
+                    text-align: center;
+                    width: 75px;
+                    height: 40px;
+                    line-height: 42px;
+                    text-transform: uppercase;
+                    font-size: 14px;
+               }                 
+               
+               .weekly-time {
+                    position: absolute;
+                    left: 200px;
+                    font-size: 24px;
+                    top: 8px;   
+               } 
+               .add-new-schedule {
+                    position: absolute;
+                    left: 500px;
+                    top: 10px;
+                    text-transform: uppercase;
+                    font-size: 16px;    
+                    
+ 
+               }
+               .remove-schedule {
+                    border: 1px solid gray;
+                    position: absolute;
+                    left: 665px;
+                    height: 40px;
+                    width: 60px;
+                    line-height: 40px;
+                    font-size: 14px;
+                    width: 60px;
+                    text-align: center;
+               }                
+            }    
+        }  
+        
+        .diff {
+            background-color: @amber-color;
+        }          
+    }
+}
+

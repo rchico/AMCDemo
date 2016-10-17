@@ -1,0 +1,129 @@
+.status-detectors {
+    .content {
+        ul {
+            &.pedestrian-status {
+                display: none;   
+            }    
+            li {
+                width: 99px;
+                background: transparent url('img/icon-bb-det-status-nonactuated.png') no-repeat center 3px;
+                border-right: 1px solid #8e8e8e;
+                border-bottom: 1px solid #8e8e8e;
+                
+                &.on {
+                    background: transparent url('img/icon-bb-det-status-actuated.png') no-repeat center 3px;                    
+                    span {
+                        &.det-id {
+                            right: 55px; 
+                            text-align: left;
+                        }    
+                        
+                        &.lock-status {
+                            left: 58px;   
+                        }    
+                    }    
+                }    
+                
+             
+                
+                div {
+                    width: 80px;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                    height: 32px;
+                    position: relative;
+                    span {
+                        &.det-id {
+                            display: block;
+                            width: 20px;
+                            font-size: 16px;
+                            text-align: right;
+                            position: absolute;
+                            top: 7px;
+                            right: 10px;
+                            color: #ffffff;
+                        }    
+                        &.det-status {
+                            display: block;
+                            position: absolute;
+                            width: 80px;
+                            font-size: 11px;
+                            top: 29px;
+                            text-align: center;  
+                            text-transform: uppercase;
+                            &.fail-on::after {
+                                content: "Stuck ON";
+                            } 
+                            
+                            &.fail-off::after {
+                                content: "Stuck OFF";
+                            }                                
+                            
+                        }
+                        &.lock-status {
+                            background: transparent url('img/icon-bb-det-status-lock.png') no-repeat center center;
+                            position: absolute;
+                            width: 24px;
+                            height: 24px;
+                            top: 3px;
+                            left: -2px;
+                            display: none;
+                            &.on {
+                                display: block;   
+                                
+                            }    
+                        }
+                    }    
+                    &.locked {
+                        span {
+                            &.lock-status {
+                                display: none;   
+                            }    
+                        }    
+                    }    
+                    &.on {
+                        span {
+                            &.det-id {
+                                color: #000000;   
+                            }    
+                            &.det-status {
+                                display: block;
+                            }    
+                        }    
+                    }                        
+                }    
+            }    
+        }            
+    }    
+    .bottom-strip {
+        .detection-toggle {
+            position: absolute;
+            left: 210px;
+            top: 10px;
+            ul {
+                li {
+
+                    height: 40px;
+                    
+                    &.show-vehicle-detection {
+                        width: 180px;
+                        background: transparent url('img/icon-bb-det-status-vehicle-toggle.png') no-repeat left center;
+                    }
+                    &.show-ped-detection {
+                        width: 205px;
+                        background: transparent url('img/icon-bb-det-status-ped-toggle.png') no-repeat left center;
+                    }                    
+                     &.on a {
+                        color: white;   
+                     }
+                     a {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                     }     
+                }    
+            }    
+        }    
+    }    
+}    

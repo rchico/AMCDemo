@@ -1,0 +1,199 @@
+#config-vehicle-phase-def {
+    
+    .overlay.timing {
+ 
+    .new-timing {
+        .value {
+            span {
+                font-size: 48px;
+                font-family: 'Lato';
+            }    
+        }    
+    }    
+
+    
+
+  }
+  
+    .overlay {
+        &.direction {
+            
+        .current-info .has-phase div span {
+            text-indent: 48px;
+            line-height: 26px;
+        }    
+            
+            
+         .direction-selection {
+            top: 85px;   
+            
+            .diff {
+                background-color: @amber-color !important; 
+            }    
+         }     
+.dir-nl {
+  background: transparent url('img/icon-bb-north-left-sm.png') no-repeat center center;
+  margin-left: 1px;
+}
+
+
+.dir-nt {
+ background: transparent url('img/icon-bb-north-through-sm.png') no-repeat center center;
+ margin-left: 2px;
+}
+
+.dir-nr {
+  background: transparent url('img/icon-bb-north-right-sm.png') no-repeat center center;
+  margin-left: 3px;
+}
+
+.dir-sl {
+  background: transparent url('img/icon-bb-south-left-sm.png') no-repeat center center;   
+  margin-left: 3px;
+}
+
+
+.dir-st {
+ background: transparent url('img/icon-bb-south-through-sm.png') no-repeat center center;
+ margin-left: 2px;
+}
+
+.dir-sr {
+ background: transparent url('img/icon-bb-south-right-sm.png') no-repeat center center;  
+ margin-left: 1px;
+}
+
+.dir-wl {
+ background: transparent url('img/icon-bb-west-left-sm.png') no-repeat center center;  
+ margin-left: 4px;
+}
+
+.dir-wt {
+ background: transparent url('img/icon-bb-west-through-sm.png') no-repeat center center;   
+ margin-left: 4px;
+}
+
+.dir-wr {
+ background: transparent url('img/icon-bb-west-right-sm.png') no-repeat center center;
+ margin-left: 4px;
+}
+
+.dir-el {
+  background: transparent url('img/icon-bb-east-left-sm.png') no-repeat center center;
+  
+}
+
+.dir-et {
+ background: transparent url('img/icon-bb-east-through-sm.png') no-repeat center center;
+}
+
+.dir-er {
+  background: transparent url('img/icon-bb-east-right-sm.png') no-repeat center center; 
+}
+   
+        }    
+  }      
+
+    .current-settings {
+ 
+
+        &.vehicle-startup {
+            ul {
+                li {
+                &.red {
+                    background: url('img/icon-bb-startup-red.png') no-repeat center center;
+                }
+                &.yellow {
+                    background: url('img/icon-bb-startup-yellow.png') no-repeat center center;
+                }  
+                &.green {
+                     background: url('img/icon-bb-startup-green.png') no-repeat center center;
+                }
+                &.diff {
+                    background-color: @amber-color;   
+                }    
+              div {
+    	        position: relative;
+    	        margin-top: -1px;
+    	        span {
+            	  height: 50px;
+            	  width: 60px;
+            	  position: relative;
+            	  z-index: 1;
+            	  margin-top: 0;
+                    	&::after {
+                    	 content: "R";   
+                    	}          	  
+            	  &.light {
+                    	background-color: @red-color;
+                    	background-image: none;
+                    	border-radius: 20px; 
+                    	width: 32px;
+                    	height: 32px;
+                        position: absolute;
+                    	top: 8px;
+                    	left: 14px;
+                    	z-index: 0;
+                    	border: 1px solid @frame-color;
+                    	color: white;
+                    	text-transform: uppercase;
+                    	font-family: "Raleway";
+                    	font-size: 18px;
+                    	line-height: 32px;
+                  
+     
+                    
+            	  }    
+    	        }     
+    
+            }
+            &.not-available {
+                .light {
+                    background-color: @not-available-color !important;
+                    opacity: @disabled-opacity;
+                }    
+            }                
+                }    
+            }    
+            
+        }
+    
+        &.ped-startup {
+            .values {
+            li {
+    	        position: relative;
+    	        span {
+            	  height: 47px;
+            	  width: 60px;
+            	  position: relative;
+            	  z-index: 1;
+            	  margin-top: 0;
+            	  &.light {
+                    	background: url('img/icon-bb-dont-walk.png') no-repeat center center;
+                    	width: 59px;
+                    	height: 48px;
+                        position: absolute;
+                    	top: 0;
+                    	left: 0;
+                    	z-index: 0;
+            	  }    
+    	        }                 
+                &.walk {
+                    span.light {
+                        background: url('img/icon-bb-walk.png') no-repeat center center;
+                    }    
+                }     
+            }
+               
+            }    
+          
+        }
+  
+        .diff {
+              background-color: @amber-color !important; 
+              color: #222222;
+         }   
+   
+    }    
+
+}   

@@ -1,0 +1,4261 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>In|Spire</title>
+
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body class="read-onlyx">
+	<div id="modal">
+		<h1 class="main-message">Success!</h1>
+		<p>Note that this is only a placeholder to provide user notification. Will go away in 3 seconds.</p>
+		<div class="modal-icon"></div>
+	</div>
+	<div class="overlay save-error">
+		<div class="blurry-bg"></div>
+		<div class="back"></div>
+		<div class="set"></div>			
+		<div class="confirm-title">Displaying 1 of 99 errors found</div>
+		<div class="confirm-subtitle"></div>
+		<div class="scroll-next"></div>
+		<div class="scroll-prev"></div>
+		<input id="error-id" type="hidden" value="0"/>
+	</div>
+	<div id="comm-status"></div>
+
+	<div class="container">
+		<div class="date"></div>
+		<div class="clock"></div>
+
+<!-- ************************************************************** -->
+		
+		<div id="home" class="panel home">
+			<div class="access-lock"><a href="#"></a></div>
+			<div class="names">
+				<div class="intersection-name-frame"><span></span></div>
+			</div>	
+			<div class="title"><span>In|Spire</span></div>
+
+			<div class="overlay confirm-undo">
+				<div class="blurry-bg"></div>
+				<div class="cancel"></div>
+				<div class="set"></div>			
+				<div class="confirm-title">Are you sure you want to do this?</div>
+				<div class="confirm-subtitle">Tap the 'OK' button to confirm discarding any changes made at this point.</div>
+			</div>
+			<div class="overlay confirm-load-defaults">
+				<div class="blurry-bg"></div>
+				<div class="cancel"></div>
+				<div class="set"></div>			
+				<div class="confirm-title">You have unsaved changes at this time. Are you sure you want to replace it with default settings?</div>
+				<div class="confirm-subtitle">Tap the 'OK' button to load default settings</div>
+			</div>			
+			<div class="content">
+				<div class="tabs-home">
+					<div class="tab tab-1 active"><a>Diagnostics</a></div>
+					<div class="tab tab-2"><a>Config</a></div>
+					<div class="tab tab-3"><a>Settings</a></div>
+					<div class="tab tab-4"><a>Utils</a></div>
+				</div>
+				<div class="tab-content tab-content-1 active">
+					<ul>
+						<li class="intersection-status">
+							<a>
+								<div class="icon"></div>
+								<span>Intersection<br/>Status</span>
+							</a>
+						</li>
+						<li class="detection-status">
+							<a>
+								<div class="icon"></div>
+								<span>Detection<br/>Status</span>
+							</a>
+						</li>
+						
+						<li class="manual-override">
+							<a>
+								<div class="icon"></div>
+								<span>Manual<br/>Override</span>
+							</a>
+						</li>
+						<li class="schedule-list">
+							<a>
+								<div class="icon"></div>
+								<span>Schedule<br/>Overview</span>
+							</a>
+						</li>						
+						<!--					
+						<li class="system-health">
+							<a>
+								<div class="icon"></div>
+								<span>In|Spire<br/>Health</span>
+							</a>
+						</li>
+					-->		
+					</ul>
+				</div>
+				<div class="tab-content tab-content-2">
+					<div class="scroll-left"></div>
+					<ul>
+						<li class="current-config disabled"><a href="#"><div class="icon"></div><span>Current<br/>Config</span></a></li>
+						<li class="base-config"><a href="#"><div class="icon"></div><span>All<br/>Configs</span></a></li>
+						<li class="preempt-list-link"><a><div class="icon"></div><span>Preempt</span></a></li>
+						<li class="startup-config"><a href="#"><div class="icon"></div><span>Startup<br/>Config</span></a></li>
+						<!--<li class="go-schedule" data-help-id="4"><a><div class="help-marker"></div><div class="icon"></div><span>Scheduler</span></a></li>	-->
+						
+						<li class="channel-compatibility"><a><div class="help-marker"></div><div class="icon"></div><span class="two-line">Channel<br/>Compatibility</span></a></li>	
+						
+						<li class="global-def"><a href="#"><div class="icon"></div><span>Phase<br/>Initialization</span></a></li>	
+						<li class="phase-compatibility-link"><a href="#"><div class="icon"></div><span>Phase<br/>Compatibility</span></a></li>	
+						<li class="undo-changes"><a href="#"><div class="icon"></div><span>Undo<br/>Changes</span></a></li>						
+					</ul>
+					<div class="scroll-right"></div>
+				</div>	
+				<div class="tab-content tab-content-3">
+					<ul>
+						<!--<li class="screensaver"><a><div class="icon"></div><span></span></a></li>-->	
+						<li class="date-settings-link"><a><div class="icon"></div><span>Date / Time</span></a></li>	
+						<li class="vf6-settings"><a><div class="icon"></div><span>Network</span></a></li>	
+						<li class="system-id-link"><a><div class="icon"></div><span>System ID</span></a></li>		
+						<li class="load-defaults"><a><div class="icon"></div><span>Load Defaults</span></a></li>									
+					</ul>
+				</div>	
+				<div class="tab-content tab-content-4">
+					<ul>
+
+						<li class="update-firmware">
+							<a>
+								<div class="icon"></div>
+								<span>Update Firmware</span>
+							</a>
+						</li>	
+						<li class="update-ui">
+							<a>
+								<div class="icon"></div>
+								<span>Update UI</span>
+							</a>
+						</li>	
+						<li class="secret-menu-link">
+							<a>
+								<div class="icon"></div>
+								<span></span>
+							</a>
+						</li>																							
+					</ul>
+				</div>												
+			</div>
+
+			<div class="bottom-strip">
+				<div class="test-usb-panel"></div>
+				<!--<div class="user-identification"><div class="icon"></div><div class="label">User:</div><div class="value">FirstName LastName</div></div>-->
+				<div class="ui-version">UI ver.<span>0.0.0</span></div>
+				<div class="puppy-version">Controller<span>0.0.0.000</span></div>
+				<div class="archer-version">Watchdog<span>0.0.0.000</span></div>
+				<div class="ip-address">IP Address:<span></span></div>
+				<div class="secret-reload" style="position:absolute;right:0;width:60px;height:60px;"></div>
+			</div>
+		</div>
+
+<!-- ************************************************************** -->
+
+		<div id="perl-test" class="panel perl-test">
+			<a href="#" class="go-straight-home">home</a>		
+			<div class="intersection-name-frame"></div><div class="configuration-name-frame"></div>
+			<div class="title"><span>Perl Test</span></div>
+			<div class="content">
+				<div class="value1">
+					<label>Value1:</label><input type="text" id="value1" value="humps"/>
+				</div>
+				<div class="value2">
+					<label>Value2:</label><input type="text" id="value2" value="lumps"/>
+				</div>
+				<div class="submit-perl">
+				<input type="button" value="Test Me" />
+				</div>				
+			</div>
+			<div class="bottom-strip">
+				
+			</div>		
+		</div>
+
+<!-- ************************************************************** -->
+
+		<div id="seq-group-list" class="panel seq-groups-list">
+			<a href="#" id="go-straight-back" class="go-straight-back" data-panel="config-detail-home"></a>	
+			<a href="#" class="save"></a>		
+			<div class="names">
+				<div class="intersection-name-frame"><span></span></div>
+				<div class="configuration-name-frame"><span></span></div>
+			</div>	
+			<div class="title"><span>Sequence Groups</span></div>
+			<div class="content">
+				<ul></ul>		
+			</div>
+			<div class="bottom-strip">
+				<div data-panel="home" id="go-straight-home" class="go-straight-home">home</div>
+			</div>		
+		</div>
+
+<!-- ************************************************************** -->
+
+		<div id="seq-group-detail" class="panel seq-group-detail">
+			<a href="#" id="go-straight-back" class="go-straight-back" data-panel="seq-group-list"></a>	
+			<a href="#" class="save"></a>		
+			<div class="names">
+				<div class="intersection-name-frame"><span></span></div>
+				<div class="configuration-name-frame"><span></span></div>
+			</div>	
+			<div class="title"><span>Sequence Group</span></div>
+			<div class="content">
+				<div class="current-settings seq-group-name">
+					<div class="label"><span>Name</span></div>
+					<div class="values">
+						<ul><li></li></ul>
+					</div>
+				</div>
+				<div class="current-settings phase-selected">
+					<div class="label"><span>Phase Selected</span></div>
+					<div class="values">
+						<ul>
+						</ul>
+					</div>
+				</div>
+				<input type="hidden" value="0" id="seq-group-loc">		
+			</div>
+			<div class="bottom-strip">
+				<div data-panel="home" id="go-straight-home" class="go-straight-home">home</div>
+				<div class="page-up"></div>
+				<div class="page-down"></div>			
+			</div>		
+		</div>
+
+<!-- ************************************************************** -->
+
+		<div id="seq-group-seq-def" class="panel config seq-group-seq-def">
+			<div class="names">
+				<div class="intersection-name-frame"><span></span></div>
+				<div class="configuration-name-frame"><span></span></div>
+			</div>	
+			<a href="#" id="go-straight-back" class="go-straight-back" data-panel="seq-group-detail"></a>	
+			<a href="#" class="save"></a>	
+			<a class="save"></a>
+			<div class="title"><span>Sequence Group - Sequence Definitions</span></div>
+
+			<div class="content has-phases">
+				<div class="current-settings">
+					<div class="label"><span>Sequence 1a</span></div>
+					<div class="values">
+						<ul>
+						</ul>
+					</div>
+				</div>
+
+				<div class="available-states">
+					<span>Available States</span>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>
+																				
+			</div>
+			<div class="bottom-strip">
+				<div data-panel="home" id="go-straight-home" class="go-straight-home">home</div>
+			</div>
+		</div>
+
+<!-- ************************************************************** -->
+
+		<div id="seq-group-state-def" class="panel config seq-group-state-def">
+			<div class="names">
+				<div class="intersection-name-frame"><span></span></div>
+				<div class="configuration-name-frame"><span></span></div>
+			</div>	
+			<a href="#" id="go-straight-back" class="go-straight-back" data-panel="seq-group-detail"></a>	
+			<a href="#" class="save"></a>	
+			<a class="save"></a>
+			<div class="title"><span>Sequence Group - State Definitions</span></div>
+
+			<div class="overlay confirm-discard">
+				<div class="blurry-bg"></div>
+				<div class="cancel"></div>
+				<div class="set"></div>			
+				<div class="confirm-title">We found at least one (1) sequence using this phase.</div>
+				<div class="confirm-subtitle">Tapping the 'OK' button will discard any previously defined sequences for this sequence group.</div>
+				<input type="hidden" id="phase-selected" value="0"/>
+			</div>
+
+			<div class="content has-phases">
+				<div class="current-settings vehicle phase header">
+					<div class="label"><span>Phase</span></div>
+					<div class="values">
+						<ul>
+						</ul>
+					</div>
+				</div>
+				<!--
+				<div class="current-settings direction">
+					<div class="label"><span>Movement</span></div>
+					<div class="values">
+						<ul>
+							<li class="has-popup"><div class="dir-sl"></div></li>
+							<li class="has-popup"><div class="dir-nt"></div></li>
+							<li class="has-popup"><div class="dir-el"></div></li>
+							<li class="has-popup"><div class="dir-wt"></div></li>
+							<li class="has-popup"><div class="dir-nl"></div></li>
+							<li class="has-popup"><div class="dir-st"></div></li>
+							<li class="has-popup"><div class="dir-wl"></div></li>
+							<li class="has-popup"><div class="dir-et"></div></li>
+						</ul>
+					</div>
+				</div>
+				-->
+				<div class="current-settings seq-group current">
+					<div class="label"><span>Sequence Group 1</span></div>
+					<div class="values">
+						<ul>
+						</ul>
+					</div>
+				</div>
+
+				<div class="available-states">
+					<span>Available States</span>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>
+																				
+			</div>
+			<div class="bottom-strip">
+				<div data-panel="home" id="go-straight-home" class="go-straight-home">home</div>
+			</div>
+		</div>
+
+<!-- ************************************************************** -->
+
+		<div id="keyboard-panel" class="panel">
+			<a href="#" id="go-straight-back" class="go-straight-back" data-panel="home"></a>
+			<a href="#" class="set"></a>	
+			<div class="edit-name-frame"></div>
+			<div class="title"><span>Keyboard</span></div>
+			<div class="content">
+					<div class="keyboard-entry">
+						<div class="clear-entry"></div>
+						<div class="current-entry">_</div>
+						<input type="hidden" class="current-text"/>
+						<input type="hidden" class="item-to-change"/>
+					</div>
+
+					<div class="keyboard keyboard-ucase">
+						<ul class="row-1">
+							<li data-key="Q"><a><span>Q</span></a></li>
+							<li data-key="W"><a><span>W</span></a></li>
+							<li data-key="E"><a><span>E</span></a></li>
+							<li data-key="R"><a><span>R</span></a></li>
+							<li data-key="T"><a><span>T</span></a></li>
+							<li data-key="Y"><a><span>Y</span></a></li>
+							<li data-key="U"><a><span>U</span></a></li>
+							<li data-key="I"><a><span>I</span></a></li>
+							<li data-key="O"><a><span>O</span></a></li>
+							<li data-key="P"><a><span>P</span></a></li>
+						</ul>
+						<ul class="row-2">
+							<li data-key="A"><a><span>A</span></a></li>
+							<li data-key="S"><a><span>S</span></a></li>
+							<li data-key="D"><a><span>D</span></a></li>
+							<li data-key="F"><a><span>F</span></a></li>
+							<li data-key="G"><a><span>G</span></a></li>
+							<li data-key="H"><a><span>H</span></a></li>
+							<li data-key="J"><a><span>J</span></a></li>
+							<li data-key="K"><a><span>K</span></a></li>
+							<li data-key="L"><a><span>L</span></a></li>
+						</ul>
+						<ul class="row-3">
+							<li data-key="abc"><a><span>abc</span></a></li>
+							<li data-key="Z"><a><span>Z</span></a></li>
+							<li data-key="X"><a><span>X</span></a></li>
+							<li data-key="C"><a><span>C</span></a></li>
+							<li data-key="V"><a><span>V</span></a></li>
+							<li data-key="B"><a><span>B</span></a></li>
+							<li data-key="N"><a><span>N</span></a></li>
+							<li data-key="M"><a><span>M</span></a></li>
+							<li class="del" data-key="del"><a><span>Backspace</span></a></li>
+						</ul>
+						<ul class="row-4">
+							<li class="num" data-key="num"><a><span>123</span></a></li>
+							<li class="space" data-key=" "><a><span>Space</span></a></li>
+						</ul>
+						<div class="last-typed"><span></span></div>
+					</div>
+					<div class="keyboard keyboard-lcase">
+						<ul class="row-1">
+							<li data-key="q"><a><span>q</span></a></li>
+							<li data-key="w"><a><span>w</span></a></li>
+							<li data-key="e"><a><span>e</span></a></li>
+							<li data-key="r"><a><span>r</span></a></li>
+							<li data-key="t"><a><span>t</span></a></li>
+							<li data-key="y"><a><span>y</span></a></li>
+							<li data-key="u"><a><span>u</span></a></li>
+							<li data-key="i"><a><span>i</span></a></li>
+							<li data-key="o"><a><span>o</span></a></li>
+							<li data-key="p"><a><span>p</span></a></li>
+						</ul>
+						<ul class="row-2">
+							<li data-key="a"><a><span>a</span></a></li>
+							<li data-key="s"><a><span>s</span></a></li>
+							<li data-key="d"><a><span>d</span></a></li>
+							<li data-key="f"><a><span>f</span></a></li>
+							<li data-key="g"><a><span>g</span></a></li>
+							<li data-key="h"><a><span>h</span></a></li>
+							<li data-key="j"><a><span>j</span></a></li>
+							<li data-key="k"><a><span>k</span></a></li>
+							<li data-key="l"><a><span>l</span></a></li>
+						</ul>
+						<ul class="row-3">
+							<li data-key="ABC"><a><span>ABC</span></a></li>
+							<li data-key="z"><a><span>z</span></a></li>
+							<li data-key="x"><a><span>x</span></a></li>
+							<li data-key="c"><a><span>c</span></a></li>
+							<li data-key="v"><a><span>v</span></a></li>
+							<li data-key="b"><a><span>b</span></a></li>
+							<li data-key="n"><a><span>n</span></a></li>
+							<li data-key="m"><a><span>m</span></a></li>
+							<li class="del" data-key="del"><a><span>Backspace</span></a></li>
+						</ul>
+						<ul class="row-4">
+							<li class="num" data-key="num"><a><span>123</span></a></li>
+							<li class="space" data-key=" "><a><span>space</span></a></li>
+						</ul>
+						<div class="last-typed"><span></span></div>
+					</div>	
+					<div class="keyboard keyboard-num">
+						<ul class="row-1">
+							<li data-key="1"><a><span>1</span></a></li>
+							<li data-key="2"><a><span>2</span></a></li>
+							<li data-key="3"><a><span>3</span></a></li>
+							<li data-key="4"><a><span>4</span></a></li>
+							<li data-key="5"><a><span>5</span></a></li>
+							<li data-key="6"><a><span>6</span></a></li>
+							<li data-key="7"><a><span>7</span></a></li>
+							<li data-key="8"><a><span>8</span></a></li>
+							<li data-key="9"><a><span>9</span></a></li>
+							<li data-key="0"><a><span>0</span></a></li>
+						</ul>
+						<ul class="row-2">
+							<li data-key=":"><a><span>:</span></a></li>
+							<li data-key="/"><a><span>/</span></a></li>
+							<li data-key="."><a><span>.</span></a></li>
+							<li data-key="-"><a><span>-</span></a></li>
+							<li data-key=""></li>
+							<li data-key=""></li>
+							<li data-key=""></li>
+							<li data-key=""></li>
+							<li data-key=""></li>
+						</ul>
+						<ul class="row-3">
+							<li data-key="ABC"><a><span>ABC</span></a></li>
+							<li data-key=""></li>
+							<li data-key=""></li>
+							<li data-key=""></li>
+							<li data-key=""></li>
+							<li data-key=""></li>
+							<li data-key=""></li>
+							<li data-key=""></li>
+							<li class="del" data-key="del"><a><span>Backspace</span></a></li>
+						</ul>
+						<ul class="row-4">
+							<li class="abc" data-key="abc"><a><span>abc</span></a></li>
+							<li class="space" data-key=" "><a><span>space</span></a></li>
+						</ul>
+						<div class="last-typed"><span></span></div>
+					</div>							
+			</div>
+			<div class="bottom-strip">
+				<div data-panel="home" id="go-straight-home" class="go-straight-home">home</div>
+			</div>		
+		</div>
+
+<!-- ************************************************************** -->
+
+
+			<div id="config-detail-home" class="panel config config-detail-home">
+			<a href="#" id="go-straight-back" class="go-straight-back" data-panel="config-list"></a>
+			<div class="access-lock"><a href="#"></a></div>
+			<a href="#" class="save"></a>
+			<div class="names">
+				<div class="intersection-name-frame"><span></span></div>
+				<div class="configuration-name-frame"><span></span></div>
+			</div>	
+			<div class="title"><span>Configuration Overview</span></div>
+
+
+
+
+			<div class="content">
+				<div>
+					<ul>
+						<!--<li class="vehicle-config"><a href="#"><span>Phase Startup</span></a></li>-->
+						<li class="phase-timing"><a href="#"><span class="two-line">Vehicle Phases</span></a></li>
+						<li class="ped-config"><a href="#"><span>Pedestrian Phases</span></a></li>
+						<li class="dynamic-max-green"><a href="#"><span class="two-line">Dynamic Max Green</span></a></li>
+						<li class="left-turn-permissive"><a href="#"><span class="two-line">Left Turn Permissive</span></a></li>
+						<!--<li class="detector-inputs"><a href="#"><div class="icon"></div><span class="two-line">Detector Configuration</span></a></li>
+						<li class="timed-overlap"><a href="#"><span>Overlap</span></a></li>-->
+						<li class="veh-detector-link"><a href="#"><span>Vehicle Detectors</span></a></li>
+						<li class="ped-detector-link"><a href="#"><span>Pedestrian Detectors</span></a></li>
+						<li class="sequence-groups-link"><a href="#"><span>Sequence Groups</span></a></li>
+						<li class="configuration-name-edit"><a href="#"><span>Configuration Name</span></a></li>
+						
+						<li class="delete-config no-more"><a href="#"><span class="two-line">Delete Configuration</span></a></li>
+						<!--
+						<li class="clone-config"><a href="#"><div class="icon"></div><span class="two-line">Clone Configuration</span></a></li>
+						
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>				
+						-->
+						
+					</ul>
+				</div>
+			</div>
+			<div class="bottom-strip">
+				<div data-panel="home" id="go-straight-home" class="go-straight-home">home</div>
+			</div>
+		</div>
+
+<!-- ************************************************************** -->
+
+		<div id="preempt-detail-home" class="panel preempt-detail-home">
+			<a href="#" id="go-straight-back" class="go-straight-back" data-panel="preempt-list"></a>
+			<div class="access-lock"><a href="#"></a></div>
+			<a href="#" class="save"></a>
+			<div class="names">
+				<div class="intersection-name-frame"><span></span></div>
+				<div class="preempt-name-frame"><span>PREEMPT NAME</span></div>
+			</div>	
+			<div class="title"><span>Preempt Overview</span></div>
+
+
+			<div class="content">
+				<div>
+					<ul>
+					<!--
+						<li class="preempt-setup-link"><a href="#"><div class="icon"></div><span>Preempt Setup</span></a></li>
+						<li class="dwell-link"><a href="#"><div class="icon"></div><span>Dwell</span></a></li>
+						<li class="preempt-list"><a href="#"><div class="icon"></div><span>Preempt List</span></a></li>
+					-->	
+						<li class="preempt-setup-link"><a href="#"><span>Preempt Setup</span></a></li>
+					
+						<li class="phase-timing-link"><a href="#"><span>Vehicle Phases</span></a></li>
+						<li class="ped-preempt"><a href="#"><span>Pedestrian Phases</span></a></li>
+						<li class="left-turn-link"><a href="#"><span>Left Turn Permissive</span></a></li>
+						<!--
+						<li class="phase-service"><a href="#"><span>Phase Service</span></a></li>
+						<li class="sequence"><a href="#"><span>Sequence</span></a></li>
+						
+						<li class="detector-configuration"><a href="#"><span>Detector Configuration</span></a></li>-->
+						<li class="phase-startup-link"><a href="#"><span>Phase Startup</span></a></li>
+						<li class="ped-detector-link"><a href="#"><span>Pedestrian Detectors</span></a></li>
+						<li class="vehicle-detector-link"><a href="#"><span>Vehicle Detectors</span></a></li>
+						
+					</ul>
+				</div>
+			</div>
+			<div class="bottom-strip">
+				<div data-panel="home" id="go-straight-home" class="go-straight-home">home</div>
+
+			</div>
+		</div>
+
+<!-- ************************************************************** -->
+		<div id="calibration" class="panel calibration">
+			<div class="content">
+			  	<div class="copy">About to start calibration in <span>10</span></div>
+			  	<div class="icon"></div>
+			  	<span>Unsaved changes will be lost when completed</span>
+			  	<a class="abort">Abort</a>
+			</div>
+		</div>
+<!-- ************************************************************** -->
+		<div class="panel passcode">
+			<div class="background"></div>
+			<div class="message">
+				<div class="icon"></div>
+				<div class="copy">Copy goes here</div>
+			</div>
+			<div class="inspire-logo">
+				<span>Intersection Manager</span>
+			</div>
+			<div class="content">
+				<ul class="track-entry">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<ul class="keypad">
+					<li data-keypad-num="1"><a><span>1</span></a></li>
+					<li data-keypad-num="2"><a><span>2</span></a></li>
+					<li data-keypad-num="3"><a><span>3</span></a></li>
+					<li data-keypad-num="4"><a><span>4</span></a></li>
+					<li data-keypad-num="5"><a><span>5</span></a></li>
+					<li data-keypad-num="6"><a><span>6</span></a></li>
+					<li data-keypad-num="7"><a><span>7</span></a></li>
+					<li data-keypad-num="8"><a><span>8</span></a></li>
+					<li data-keypad-num="9"><a><span>9</span></a></li>
+					<li></li>
+					<li data-keypad-num="0"><a><span>0</span></a></li>
+					<li data-keypad-num=""><a class="backspace"><span></span></a></li>
+				</ul>
+
+			</div>
+			<div class="ui-version">UI ver.<span>0.0.0</span></div>
+		</div>		
+
+<!-- ************************************************************** -->
+		<!--
+		<div class="panel system-health-view">
+			<a href="#" class="go-straight-home">home</a>
+			<div class="access-lock"><a href="#"></a></div>
+			<a href="#" class="save"></a>
+			<div class="configuration-name-frame"></div>
+			<div class="title"><span>In|Spire Health</span></div>		
+			<div class="content">
+				<div class="home-nav-left disabled"></div>
+				<div class="main-selection-frame">
+				<ul>
+					<li><a><div class="icon"></div><span>Display Processor</span></a></li>
+					<li><a><div class="icon"></div><span>Control Processor</span></a></li>
+					<li><a><div class="icon"></div><span>I/O Processor</span></a></li>
+					<li><a><div class="icon"></div><span>SDLC</span></a></li>
+					<li><a><div class="icon"></div><span>Voltages</span></a></li>
+					<li><a><div class="icon"></div><span>Temperature</span></a></li>
+				</ul> 
+				</div>
+				<div class="home-nav-right disabled"></div>
+			</div> 
+
+			<div class="bottom-strip">
+				<div data-panel="home" class="go-back"><span></span></div>
+			</div>
+		</div>
+		-->
+
+<!-- ************************************************************** -->
+
+		<div id="channel-compatibility-view" class="panel channel-compatibility-view">
+			<a href="#" id="go-straight-back" class="go-straight-back" data-panel="home"></a>
+			<div class="access-lock"><a href="#"></a></div>
+			<a href="#" class="save"></a>
+			<div class="configuration-name-frame"></div>
+			<div class="title"><span>Channel Compatibility</span></div>		
+			<div class="content read-only">
+				<!-- getChannelCompatibility -->																						
+			</div> 
+			<div class="bottom-strip">
+				
+			
+				<div class="page-down"><span></span></div>
+				<div class="page-up"><span></span></div>
+				
+				<div class="channel-selections"><span class="label"></span><span class="value"></span></div>
+				<div class="edit-toggle switch"></div>
+				
+			</div>
+		</div>
+
+<!-- ************************************************************** -->
+
+		<div id="phase-compatibility-view" class="panel phase-compatibility-view">
+			<a href="#" id="go-straight-back" class="go-straight-back" data-panel="home"></a>
+			<div class="access-lock"><a href="#"></a></div>
+			<a href="#" class="save"></a>
+			<div class="configuration-name-frame"></div>
+			<div class="title"><span>Phase Compatibility</span></div>		
+			<div class="content read-only">
+																										
+			</div> 
+			<div class="bottom-strip">
+				
+				<div class="edit-toggle switch"></div>
+				
+			</div>
+		</div>
+
+<!-- ************************************************************** -->
+
+		<div id="config-list" class="config panel">
+			<a href="#" id="go-straight-back" class="go-straight-back" data-panel="home"></a>
+			<div class="access-lock"><a href="#"></a></div>
+			<a href="#" class="save"></a>
+			<div class="names">
+				<div class="intersection-name-frame"><span></span></div>
+			</div>	
+			<div class="title"><span>Configurations</span></div>
+
+			<div class="overlay confirm-config-delete">
+				<div class="blurry-bg"></div>
+				<div class="cancel"></div>
+				<div class="set"></div>			
+				<div class="confirm-title">Are you sure you want to delete this configuration?</div>
+				<div class="confirm-subtitle">Tap the 'OK' button to confirm deletion of this configuration.</div>
+			</div>
+
+				<div class="content">
+					<ul>
+					</ul>
+				</div>
+				<div class="bottom-strip">
+					<div data-panel="home" id="go-straight-home" class="go-straight-home">home</div>
+					<div class="page-down"><span></span></div>
+					<div class="page-up"><span></span></div>
+				</div>
+		</div>		
+
+<!-- ************************************************************** -->
+
+		<div id="preempt-list" class="panel preempt-list">
+			<a href="#" id="go-straight-back" class="go-straight-back" data-panel="home"></a>
+			<div class="access-lock"><a href="#"></a></div>
+			<a href="#" class="save"></a>
+			<div class="names">
+				<div class="intersection-name-frame"><span></span></div>
+				<div class="preempt-name-frame"><span></span></div>
+			</div>	
+			<div class="title"><span>Preemptions</span></div>
+				<div class="content">			
+					<ul class="list"></ul>
+				</div>
+				<div class="bottom-strip">
+					<div data-panel="home" id="go-straight-home" class="go-straight-home">home</div>
+					<!--
+					<div class="page-up"><span></span></div>
+					<div class="page-down"><span></span></div>	
+					-->
+				</div>
+		</div>		
+
+<!-- ************************************************************** -->
+		<!--
+		<div class="panel test-panel-1">
+			<a href="#" class="go-straight-home">home</a>
+			<div class="access-lock"><a href="#"></a></div>
+			<a href="#" class="save"></a>
+			<div class="configuration-name-frame"></div>
+			<div class="title"><span>Test Panel</span></div>
+				<div class="content">
+					<ul>
+					</ul>
+				</div>
+				<div class="bottom-strip">
+					<div data-panel="home" class="go-back"><span></span></div>
+					<div class="page-up" disabled="disabled"><span></span></div>
+					<div class="page-down" disabled="disabled"><span></span></div>	
+				</div>
+		</div>	
+		-->
+
+<!-- ************************************************************** -->
+<!--
+		<div class="panel seq-coord">
+			<div class="configuration-name-frame"><span></span></div>
+			<a href="#" class="go-straight-home"></a>
+			<div class="access-lock"><a href="#"></a></div>
+			<a class="save"></a>
+			<div class="title"><span>Coordination Definition</span></div>
+
+			<div class="overlay offset-entry">
+				<div class="blurry-bg"></div>
+				<div class="cancel"></div>
+				<div class="save"></div>
+				<div class="current-info">
+					<div class="current-offset-entry">
+						<label>Current Offset (Seconds):</label>
+						<div class="value"><span>1</span></div>
+					</div>
+					<div class="new-offset">
+						<label>New Offset:</label>
+						<div class="value"><span></span></div>
+					</div>											
+				</div>
+					<div>
+						<input type="hidden" id="value-entered" />
+						<ul class="keypad">
+							<li data-keypad-num="1" class=""><a><span>1</span></a></li>
+							<li data-keypad-num="2"><a><span>2</span></a></li>
+							<li data-keypad-num="3"><a><span>3</span></a></li>
+							<li data-keypad-num="4"><a><span>4</span></a></li>
+							<li data-keypad-num="5"><a><span>5</span></a></li>
+							<li data-keypad-num="6"><a><span>6</span></a></li>
+							<li data-keypad-num="7"><a><span>7</span></a></li>
+							<li data-keypad-num="8"><a><span>8</span></a></li>
+							<li data-keypad-num="9"><a><span>9</span></a></li>
+							<li></li>
+							<li data-keypad-num="0"><a><span>0</span></a></li>
+							<li data-keypad-num=""><a class="backspace"><span></span></a></li>
+						</ul>
+					</div>
+			</div>
+
+			<div class="overlay cycle-entry">
+				<div class="blurry-bg"></div>
+				<div class="cancel"></div>
+				<div class="save"></div>
+				<div class="current-info">
+					<div class="current-cycle-entry">
+						<label>Current Cycle Length (Seconds):</label>
+						<div class="value"><span>1</span></div>
+					</div>
+					<div class="new-cycle">
+						<label>New Cycle Length:</label>
+						<div class="value"><span></span></div>
+					</div>											
+				</div>
+					<div>
+						<input type="hidden" id="value-entered" />
+						<ul class="keypad">
+							<li data-keypad-num="1" class=""><a><span>1</span></a></li>
+							<li data-keypad-num="2"><a><span>2</span></a></li>
+							<li data-keypad-num="3"><a><span>3</span></a></li>
+							<li data-keypad-num="4"><a><span>4</span></a></li>
+							<li data-keypad-num="5"><a><span>5</span></a></li>
+							<li data-keypad-num="6"><a><span>6</span></a></li>
+							<li data-keypad-num="7"><a><span>7</span></a></li>
+							<li data-keypad-num="8"><a><span>8</span></a></li>
+							<li data-keypad-num="9"><a><span>9</span></a></li>
+							<li></li>
+							<li data-keypad-num="0"><a><span>0</span></a></li>
+							<li data-keypad-num=""><a class="backspace"><span></span></a></li>
+						</ul>
+					</div>
+			</div>
+
+			<div class="overlay splits">
+				<div class="blurry-bg"></div>
+				<div class="cancel"></div>
+				<div class="save"></div>
+				<div class="current-info">
+					<div class="current-split">
+						<label>Current Split (Seconds):</label>
+						<div class="value"><span>1</span></div>
+					</div>
+					<div class="current-state">
+						<label>State:</label>
+						<div class="state-container"></div>
+					</div>
+					<div class="new-split">
+						<label>New Split:</label>
+						<div class="value"><span></span></div>
+					</div>											
+				</div>
+					<div>
+						<input type="hidden" id="value-entered" />
+						<ul class="keypad">
+							<li data-keypad-num="1" class=""><a><span>1</span></a></li>
+							<li data-keypad-num="2"><a><span>2</span></a></li>
+							<li data-keypad-num="3"><a><span>3</span></a></li>
+							<li data-keypad-num="4"><a><span>4</span></a></li>
+							<li data-keypad-num="5"><a><span>5</span></a></li>
+							<li data-keypad-num="6"><a><span>6</span></a></li>
+							<li data-keypad-num="7"><a><span>7</span></a></li>
+							<li data-keypad-num="8"><a><span>8</span></a></li>
+							<li data-keypad-num="9"><a><span>9</span></a></li>
+							<li></li>
+							<li data-keypad-num="0"><a><span>0</span></a></li>
+							<li data-keypad-num=""><a class="backspace"><span></span></a></li>
+						</ul>
+					</div>
+			</div>
+
+
+			<div class="content">
+				<div class="coord-values">
+					<div class="current-coord-phase"><span class="label">Coord Phase</span><span class="value has-popup">999</span></div>
+					<div class="current-cycle-length"><span class="label">Cycle Length</span><span class="value has-popup">120</span></div>
+					
+				</div>
+				<div class="current-offset"><span class="label">Offset</span><span class="value has-popup">999</span></div>
+				<div class="offset-frame offset-location">
+					<span class="label">Offset Location to Phase</span>
+					<div class="start"><span class="switch on"></span><span class="label">Start of Green</span></div>
+					<div class="end"><span class="switch"></span><span class="label">End of Green</span></div>
+				</div>
+				<div class="coord-set coord-set-1">
+					<ul class="seq-group">
+						<li class="current">Sequence Group 1</li>
+						<li>Sequence Group 2</li>
+						<li>Sequence Group 3</li>
+					</ul>
+					<div class="coord-states">
+						<div class="values">
+							<div class="current"></div>
+							<div></div>
+							<div></div>
+						</div>
+					</div>
+				</div>
+				<div class="coord-set coord-set-2">
+					<ul class="seq-group">
+						<li>Sequence Group 1</li>
+						<li class="current">Sequence Group 2</li>
+						<li>Sequence Group 3</li>
+					</ul>
+					<div class="coord-states">
+						<div class="values">
+							<div></div>
+							<div class="current"></div>
+							<div></div>
+						</div>
+					</div>				
+				</div>
+																				
+			</div>
+			<div class="bottom-strip">
+				<div data-panel="config-detail-home" class="go-back"></div>
+				<div class="page-up page-up-1"></div>
+				<div class="page-down page-down-1"></div>
+				<div class="page-up page-up-2"></div>
+				<div class="page-down page-down-2"></div>
+			</div>
+		</div>
+
+-->
+
+<!-- ************************************************************** -->
+
+		<div id="global-phase-def" class="panel global">
+			<div class="names">
+				<div class="intersection-name-frame"><span></span></div>
+			</div>	
+			<a href="#" id="go-straight-back" class="go-straight-back" data-panel="home"></a>
+			<div class="access-lock"><a href="#"></a></div>
+			<div class="help"><a href="#"></a></div>
+			<a class="save"></a>
+			<div class="title"><span>Phase Initialization</span></div>
+
+			<div class="overlay direction">
+				<div class="blurry-bg"></div>
+					<div class="cancel"></div>
+					<div class="set"></div>
+					<div class="current-info">
+						<div class="has-phase current-movement">
+						<label>Current Movement:</label>
+							<div></div>
+						</div>
+						<div class="has-phase new-direction">
+							<label>New Movement:</label>
+							<div><span></span></div>
+						</div>								
+					</div>
+					<div class="direction-selection">
+						<input id="phase-selected" type="hidden"/>
+						<input id="direction-selected" type="hidden"/>
+						<ul>
+							<li></li>
+							<li><div class="dir-sr" data-movement="6"></div></li>
+							<li><div class="dir-st" data-movement="5"></div></li>
+							<li><div class="dir-sl" data-movement="4"></div></li>
+							<li></li>
+
+							<li><div class="dir-el" data-movement="7"></div></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li><div class="dir-wr" data-movement="12"></div></li>
+
+							<li><div class="dir-et" data-movement="8"></div></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li><div class="dir-wt" data-movement="11"></div></li>
+
+							<li><div class="dir-er" data-movement="9"></div></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li><div class="dir-wl" data-movement="10"></div></li>
+
+							<li></li>
+							<li><div class="dir-nl" data-movement="1"></div></li>
+							<li><div class="dir-nt" data-movement="2"></div></li>
+							<li><div class="dir-nr" data-movement="3"></div></li>
+							<li></li>	
+						</ul>
+					</div>
+			</div>	
+
+				<div class="overlay timing">
+					<div class="blurry-bg"></div>
+					<div class="cancel"></div>
+					<div class="set"></div>
+					<div class="current-info">
+						<div class="has-phase">
+							<label>Phase:</label>
+							<div></div>
+						</div>
+						<div class="current-timing-entry">
+							<label>Current ??):</label>
+							<div class="value"><span>1</span></div>
+						</div>
+						<div class="new-timing">
+							<label>New ??:</label>
+							<div class="value"><span></span></div>
+						</div>											
+					</div>
+						<div>
+							<input type="hidden" id="value-entered" />
+							<input type="hidden" id="item-to-update" />
+							<ul class="keypad">
+								<li data-keypad-num="1"><a><span>1</span></a></li>
+								<li data-keypad-num="2"><a><span>2</span></a></li>
+								<li data-keypad-num="3"><a><span>3</span></a></li>
+								<li data-keypad-num="4"><a><span>4</span></a></li>
+								<li data-keypad-num="5"><a><span>5</span></a></li>
+								<li data-keypad-num="6"><a><span>6</span></a></li>
+								<li data-keypad-num="7"><a><span>7</span></a></li>
+								<li data-keypad-num="8"><a><span>8</span></a></li>
+								<li data-keypad-num="9"><a><span>9</span></a></li>
+								<li data-keypad-num="."><a><span>.</span></a></li>
+								<li data-keypad-num="0"><a><span>0</span></a></li>
+								<li data-keypad-num=""><a class="backspace"><span></span></a></li>
+							</ul>
+						</div>
+				</div>
+
+			<div class="content has-phases">
+		
+				<div class="current-settings vehicle init phase">
+					<div class="label"><span>Vehicle Phase</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>
+				<div class="current-settings  set-movement">
+					<div class="label"><span>Movement</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>
+
+				<div class="current-settings vehicle vehicle-startup">
+					<div class="label"><div class="help-marker"></div><span>Startup</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>
+				<div class="current-settings keypad vehicle vehicle-channel">
+					<div class="label"><div class="help-marker"></div><span>Channel</span></div>
+					<div class="values">
+						<ul>
+						</ul>
+					</div>
+				</div>
+
+
+				<div class="current-settings ped phase">
+					<div class="label"><span>Pedestrian Phase</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>
+
+
+				<div class="current-settings ped ped-startup">
+					<div class="label"><div class="help-marker"></div><span>Startup</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>				
+				<div class="current-settings keypad ped ped-channel">
+					<div class="label"><div class="help-marker"></div><span>Channel</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>
+			</div>
+			<div class="bottom-strip">
+				<div data-panel="home" id="go-straight-home" class="go-straight-home">home</div>
+				<div class="page-up"><span></span></div>
+				<div class="page-down"><span></span></div>					
+			</div>
+		</div>
+
+<!-- ************************************************************** -->
+
+		<div id="startup-config-def" class="panel global">
+			<div class="names">
+				<div class="intersection-name-frame"><span></span></div>
+			</div>	
+			<a href="#" id="go-straight-back" class="go-straight-back" data-panel="home"></a>
+			<div class="access-lock"><a href="#"></a></div>
+			<div class="help"><a href="#"></a></div>
+			<a class="save"></a>
+			<div class="title"><span>Startup Configuration</span></div>
+
+				<div class="overlay timing">
+					<div class="blurry-bg"></div>
+					<div class="cancel"></div>
+					<div class="set"></div>
+					<div class="current-info">
+						<div class="current-timing-entry">
+							<label>Current ??):</label>
+							<div class="value"><span>1</span></div>
+						</div>
+						<div class="new-timing">
+							<label>New ??:</label>
+							<div class="value"><span></span></div>
+						</div>											
+					</div>
+						<div>
+							<input type="hidden" id="value-entered" />
+							<input type="hidden" id="item-to-update" />
+							<ul class="keypad">
+								<li data-keypad-num="1"><a><span>1</span></a></li>
+								<li data-keypad-num="2"><a><span>2</span></a></li>
+								<li data-keypad-num="3"><a><span>3</span></a></li>
+								<li data-keypad-num="4"><a><span>4</span></a></li>
+								<li data-keypad-num="5"><a><span>5</span></a></li>
+								<li data-keypad-num="6"><a><span>6</span></a></li>
+								<li data-keypad-num="7"><a><span>7</span></a></li>
+								<li data-keypad-num="8"><a><span>8</span></a></li>
+								<li data-keypad-num="9"><a><span>9</span></a></li>
+								<li data-keypad-num="."><a><span>.</span></a></li>
+								<li data-keypad-num="0"><a><span>0</span></a></li>
+								<li data-keypad-num=""><a class="backspace"><span></span></a></li>
+							</ul>
+						</div>
+				</div>
+			<div class="content">
+				<div class="current-settings startup-state">
+					<div class="label"><div class="help-marker"></div><span>Startup State</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>	
+				<div class="current-settings keypad startup-time">
+					<div class="label"><div class="help-marker"></div><span>Startup Time</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>										
+				<div class="current-settings keypad red-revert">
+					<div class="label"><div class="help-marker"></div><span>Red Revert</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>																					
+			</div>
+			<div class="bottom-strip">
+				<div data-panel="home" id="go-straight-home" class="go-straight-home">home</div>
+
+			</div>
+		</div>
+
+<!-- ************************************************************** -->
+
+<!-- 		<div id="config-vehicle-phase-def" class="panel config config-vehicle-phase-def">
+			<div class="configuration-name-frame"><span></span></div>
+			<a href="#" id="go-straight-back" class="go-straight-back" data-panel="config-detail-home"></a>
+			<div class="access-lock"><a href="#"></a></div>
+			<div class="help"><a href="#"></a></div>
+			<a class="save"></a>
+			<div class="title"><span>Phase Startup</span></div>
+
+			<div class="overlay direction">
+				<div class="blurry-bg"></div>
+					<div class="cancel"></div>
+					<div class="set"></div>
+					<div class="current-info">
+						<div class="has-phase current-movement">
+						<label>Current Movement:</label>
+							<div></div>
+						</div>
+						<div class="has-phase new-direction">
+							<label>New Movement:</label>
+							<div><span></span></div>
+						</div>								
+					</div>
+					<div class="direction-selection">
+						<input id="phase-selected" type="hidden"/>
+						<input id="direction-selected" type="hidden"/>
+						<ul>
+							<li></li>
+							<li><div class="dir-sr" data-movement="6"></div></li>
+							<li><div class="dir-st" data-movement="5"></div></li>
+							<li><div class="dir-sl" data-movement="4"></div></li>
+							<li></li>
+
+							<li><div class="dir-el" data-movement="7"></div></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li><div class="dir-wr" data-movement="12"></div></li>
+
+							<li><div class="dir-et" data-movement="8"></div></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li><div class="dir-wt" data-movement="11"></div></li>
+
+							<li><div class="dir-er" data-movement="9"></div></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li><div class="dir-wl" data-movement="10"></div></li>
+
+							<li></li>
+							<li><div class="dir-nl" data-movement="1"></div></li>
+							<li><div class="dir-nt" data-movement="2"></div></li>
+							<li><div class="dir-nr" data-movement="3"></div></li>
+							<li></li>	
+						</ul>
+					</div>
+			</div>	
+
+				<div class="overlay timing">
+					<div class="blurry-bg"></div>
+					<div class="cancel"></div>
+					<div class="set"></div>
+					<div class="current-info">
+						<div class="has-phase">
+							<label>Phase:</label>
+							<div></div>
+						</div>
+						<div class="current-timing-entry">
+							<label>Current ??):</label>
+							<div class="value"><span>1</span></div>
+						</div>
+						<div class="new-timing">
+							<label>New ??:</label>
+							<div class="value"><span></span></div>
+						</div>											
+					</div>
+						<div>
+							<input type="hidden" id="value-entered" />
+							<input type="hidden" id="item-to-update" />
+							<ul class="keypad">
+								<li data-keypad-num="1"><a><span>1</span></a></li>
+								<li data-keypad-num="2"><a><span>2</span></a></li>
+								<li data-keypad-num="3"><a><span>3</span></a></li>
+								<li data-keypad-num="4"><a><span>4</span></a></li>
+								<li data-keypad-num="5"><a><span>5</span></a></li>
+								<li data-keypad-num="6"><a><span>6</span></a></li>
+								<li data-keypad-num="7"><a><span>7</span></a></li>
+								<li data-keypad-num="8"><a><span>8</span></a></li>
+								<li data-keypad-num="9"><a><span>9</span></a></li>
+								<li data-keypad-num="."><a><span>.</span></a></li>
+								<li data-keypad-num="0"><a><span>0</span></a></li>
+								<li data-keypad-num=""><a class="backspace"><span></span></a></li>
+							</ul>
+						</div>
+				</div>
+
+			<div class="content has-phases">
+		
+
+				<div class="current-settings vehicle phase set-movement">
+					<div class="label"><span>Vehicle Phase</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>
+
+				<div class="current-settings vehicle vehicle-startup">
+					<div class="label"><div class="help-marker"></div><span>Startup</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>
+				<div class="current-settings keypad vehicle vehicle-channel">
+					<div class="label"><div class="help-marker"></div><span>Channel</span></div>
+					<div class="values">
+						<ul>
+						</ul>
+					</div>
+				</div>
+
+
+				<div class="current-settings ped phase">
+					<div class="label"><span>Pedestrian Phase</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>
+
+
+				<div class="current-settings ped ped-startup">
+					<div class="label"><div class="help-marker"></div><span>Startup</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>				
+				<div class="current-settings keypad ped ped-channel">
+					<div class="label"><div class="help-marker"></div><span>Channel</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>				
+			
+																				
+			</div>
+			<div class="bottom-strip">
+				<div data-panel="home" id="go-straight-home" class="go-straight-home">home</div>
+				<div class="page-left disabled"></div>
+				<div class="page-right disabled"></div>
+			</div>
+		</div> -->
+
+<!-- ************************************************************** -->
+
+		<div id="config-vehicle-phase-left" class="panel config config-vehicle-phase-left">
+			<div class="names">
+				<div class="intersection-name-frame"><span></span></div>
+				<div class="configuration-name-frame"><span></span></div>
+			</div>	
+			<a href="#" id="go-straight-back" class="go-straight-back" data-panel="config-detail-home"></a>
+			<div class="access-lock"><a href="#"></a></div>
+			<a class="save"></a>
+			<div class="title"><span>Left Turn Permissive</span></div>
+
+				<div class="overlay timing">
+					<div class="blurry-bg"></div>
+					<div class="cancel"></div>
+					<div class="set"></div>
+					<div class="current-info">
+						<div class="has-phase">
+							<label>Phase:</label>
+							<div></div>
+						</div>
+						<div class="current-timing-entry">
+							<label>Current ??):</label>
+							<div class="value"><span>1</span></div>
+						</div>
+						<div class="new-timing">
+							<label>New ??:</label>
+							<div class="value"><span></span></div>
+						</div>											
+					</div>
+						<div>
+							<input type="hidden" id="value-entered" />
+							<input type="hidden" id="item-to-update" />
+							<ul class="keypad">
+								<li data-keypad-num="1"><a><span>1</span></a></li>
+								<li data-keypad-num="2"><a><span>2</span></a></li>
+								<li data-keypad-num="3"><a><span>3</span></a></li>
+								<li data-keypad-num="4"><a><span>4</span></a></li>
+								<li data-keypad-num="5"><a><span>5</span></a></li>
+								<li data-keypad-num="6"><a><span>6</span></a></li>
+								<li data-keypad-num="7"><a><span>7</span></a></li>
+								<li data-keypad-num="8"><a><span>8</span></a></li>
+								<li data-keypad-num="9"><a><span>9</span></a></li>
+								<li data-keypad-num="."><a><span>.</span></a></li>
+								<li data-keypad-num="0"><a><span>0</span></a></li>
+								<li data-keypad-num=""><a class="backspace"><span></span></a></li>
+							</ul>
+						</div>
+				</div>
+
+			<div class="content has-phases">
+
+				<div class="current-settings vehicle phase header">
+					<div class="label"><span>Phase</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>	
+				<div class="current-settings left-turn-mode">
+					<div class="label"><span>Left Turn Mode</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>				
+<!-- 				<div class="current-settings protected-only">
+					<div class="label"><span>Protected Only</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>	 -->				
+				<div class="current-settings keypad permissive-start">
+					<div class="label"><span>Permissive Start Phase</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>		
+				<div class="current-settings flashing-output">
+					<div class="label"><span>Enable Flashing Yellow Arrow</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>	
+
+				<div class="current-settings keypad opposing-thru-phase">
+					<div class="label"><span>Opposing Thru Phase</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>
+
+				<div class="current-settings yellow-blanking">
+					<div class="label"><span>Yellow Blanking</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>
+
+			</div>
+			<div class="bottom-strip">
+				<div data-panel="home" id="go-straight-home" class="go-straight-home">home</div>
+				<!--<div class="page-left disabled"></div>
+				<div class="page-right"></div>
+				-->
+				
+			</div>
+		</div>
+
+<!-- ************************************************************** -->
+
+		<div id="config-ped-phase-def" class="panel config config-ped-phase-def">
+			<div class="names">
+				<div class="intersection-name-frame"><span></span></div>
+				<div class="configuration-name-frame"><span></span></div>
+			</div>	
+			<a href="#" id="go-straight-back" class="go-straight-back" data-panel="config-detail-home"></a>
+			<div class="access-lock"><a href="#"></a></div>
+			<a class="save"></a>
+			<div class="title"><span>Pedestrian Phase</span></div>
+
+				<div class="overlay timing">
+					<div class="blurry-bg"></div>
+					<div class="cancel"></div>
+					<div class="set"></div>
+					<div class="current-info">
+						<div class="has-phase">
+							<label>Phase:</label>
+							<div></div>
+						</div>
+						<div class="current-timing-entry">
+							<label>Current ??):</label>
+							<div class="value"><span>1</span></div>
+						</div>
+						<div class="new-timing">
+							<label>New ??:</label>
+							<div class="value"><span></span></div>
+						</div>											
+					</div>
+						<div>
+							<input type="hidden" id="value-entered" />
+							<input type="hidden" id="item-to-update" />
+							<ul class="keypad">
+								<li data-keypad-num="1"><a><span>1</span></a></li>
+								<li data-keypad-num="2"><a><span>2</span></a></li>
+								<li data-keypad-num="3"><a><span>3</span></a></li>
+								<li data-keypad-num="4"><a><span>4</span></a></li>
+								<li data-keypad-num="5"><a><span>5</span></a></li>
+								<li data-keypad-num="6"><a><span>6</span></a></li>
+								<li data-keypad-num="7"><a><span>7</span></a></li>
+								<li data-keypad-num="8"><a><span>8</span></a></li>
+								<li data-keypad-num="9"><a><span>9</span></a></li>
+								<li data-keypad-num="."><a><span>.</span></a></li>
+								<li data-keypad-num="0"><a><span>0</span></a></li>
+								<li data-keypad-num=""><a class="backspace"><span></span></a></li>
+							</ul>
+						</div>
+					<div class="message">
+						message goes here
+					</div>	
+				</div>
+
+
+			<div class="content has-phases">
+
+				<div class="current-settings ped phase">
+					<div class="label"><span>Phase</span></div>
+					<div class="values">
+						<ul>
+						
+						</ul>
+					</div>
+				</div>
+				<div class="current-settings ped ped-enabled">
+					<div class="label"><div class="help-marker"></div><span>Enabled</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>
+				<div class="current-settings one-call">
+					<div class="label"><span>One Call on Startup</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>									
+				<div class="current-settings keypad walk-timing">
+					<div class="label"><span>Ped Walk Timing</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>
+				<div class="current-settings keypad clear-timing">
+					<div class="label"><span>Ped Clear Timing</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>				
+				<div class="current-settings non-actuated">
+					<div class="label"><span>Non-Actuated</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>
+				<div class="current-settings rest-in-walk">
+					<div class="label"><span>Rest-In-Walk</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>
+				<div class="current-settings ped-clear-yellow">
+					<div class="label"><span>Ped Clear Times with Yellow</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>																												
+			</div>
+			<div class="bottom-strip">
+				<div data-panel="home" id="go-straight-home" class="go-straight-home">home</div>
+				<!--
+				<div class="page-left disabled"></div>
+				<div class="page-right disabled"></div>
+				-->
+			</div>
+		</div>
+
+<!-- ************************************************************** -->
+
+		<div id="config-phase-service" class="panel config config-phase-service">
+			<div class="configuration-name-frame"><span></span></div>
+			<a href="#" id="go-straight-back" class="go-straight-back" data-panel="config-detail-home"></a>
+			<div class="access-lock"><a href="#"></a></div>
+			<a class="save"></a>
+			<div class="title"><span>Phase Service</span></div>
+
+			
+				<div class="overlay default-service" style="display: block !important;">
+					<div class="blurry-bg"></div>
+					<div class="cancel"></div>
+					<div class="save"></div>
+					<div class="current-info">					
+						<div class="current-phase">
+							<label>Phase:</label>
+							<div><span>1</span></div>
+						</div>	
+						<div>
+							<label>Current Default Service:</label>
+								<div class="value"><span>1,5</span></div>
+							</div>
+					</div>
+					<div class="available-states">
+						<label>Available States<span class="new-value"></span></label>
+						<div class="state-container">
+
+						</div>
+					</div>
+				</div>
+				
+			<div class="content has-phases">
+
+				<div class="current-settings phase">
+					<div class="label"><span>Phase</span></div>
+					<div class="values">
+						<ul>
+							<li class="has-phase"><div><span>1</span></div></li>
+							<li class="has-phase"><div><span>2</span></div></li>
+							<li class="has-phase"><div><span>3</span></div></li>
+							<li class="has-phase"><div><span>4</span></div></li>
+							<li class="has-phase"><div><span>5</span></div></li>
+							<li class="has-phase"><div><span>6</span></div></li>
+							<li class="has-phase"><div><span>7</span></div></li>
+							<li class="has-phase"><div><span>8</span></div></li>
+							<li class="has-phase"><div><span>9</span></div></li>
+							<li class="has-phase"><div><span>10</span></div></li>
+							<li class="has-phase"><div><span>11</span></div></li>
+							<li class="has-phase"><div><span>12</span></div></li>
+							<li class="has-phase"><div><span>13</span></div></li>
+							<li class="has-phase"><div><span>14</span></div></li>
+							<li class="has-phase"><div><span>15</span></div></li>
+							<li class="has-phase"><div><span>16</span></div></li>
+						</ul>
+					</div>
+				</div>
+				<div class="current-settings default-phase-service">
+					<div class="label"><span>Default Service</span></div>
+					<div class="values">
+						<ul>
+							<li class="has-popup"><span>1,5</span></li>
+							<li class="has-popup"><span></span></li>
+							<li class="has-popup"><span></span></li>
+							<li class="has-popup"><span></span></li>
+							<li class="has-popup"><span></span></li>
+							<li class="has-popup"><span></span></li>
+							<li class="has-popup"><span></span></li>
+							<li class="has-popup"><span></span></li>
+							<li class="has-popup"><span></span></li>
+							<li class="has-popup"><span></span></li>
+							<li class="has-popup"><span></span></li>
+							<li class="has-popup"><span></span></li>
+							<li class="has-popup"><span></span></li>
+							<li class="has-popup"><span></span></li>
+							<li class="has-popup"><span></span></li>
+							<li class="has-popup"><span></span></li>
+						</ul>
+					</div>
+				</div>
+				<!--
+				<div class="current-settings">
+					<div class="label"><span>Phase Omit</span></div>
+					<div class="values">
+						<ul>
+							<li class="not-available"><div><span></span></div></li>
+							<li class="has-popup"><div><span>7</span></div></li>
+							<li class="not-available"><div><span></span></div></li>
+							<li class="has-popup"><div><span>7</span></div></li>
+							<li class="not-available"><div><span></span></div></li>
+							<li class="has-popup"><div><span>7</span></div></li>
+							<li class="not-available"><div><span></span></div></li>
+							<li class="has-popup"><div><span>7</span></div></li>
+						</ul>
+					</div>
+				</div>
+				-->																											
+			</div>
+			<div class="bottom-strip">
+				<div data-panel="home" id="go-straight-home" class="go-straight-home">home</div>
+				<div class="page-left disabled"></div>
+				<div class="page-right disabled"></div>
+
+			</div>
+		</div>
+
+<!-- ************************************************************** -->
+
+			<div id="config-dynamic-max-green" class="panel config config-dynamic-max-green">
+				<div class="names">
+					<div class="intersection-name-frame"><span></span></div>
+					<div class="configuration-name-frame"><span></span></div>
+				</div>	
+				<a href="#" id="go-straight-back" class="go-straight-back" data-panel="config-detail-home"></a>
+				<div class="access-lock"><a href="#"></a></div>
+				<a class="save"></a>
+				<div class="title"><span>Dynamic Max Green</span></div>
+
+				<div class="overlay timing">
+					<div class="blurry-bg"></div>
+					<div class="cancel"></div>
+					<div class="set"></div>
+					<div class="current-info">
+						<div class="has-phase">
+							<label>Phase:</label>
+							<div></div>
+						</div>
+						<div class="current-timing-entry">
+							<label>Current ??):</label>
+							<div class="value"><span>1</span></div>
+						</div>
+						<div class="new-timing">
+							<label>New ??:</label>
+							<div class="value"><span></span></div>
+						</div>											
+					</div>
+						<div>
+							<input type="hidden" id="value-entered" />
+							<input type="hidden" id="item-to-update" />
+							<ul class="keypad">
+								<li data-keypad-num="1"><a><span>1</span></a></li>
+								<li data-keypad-num="2"><a><span>2</span></a></li>
+								<li data-keypad-num="3"><a><span>3</span></a></li>
+								<li data-keypad-num="4"><a><span>4</span></a></li>
+								<li data-keypad-num="5"><a><span>5</span></a></li>
+								<li data-keypad-num="6"><a><span>6</span></a></li>
+								<li data-keypad-num="7"><a><span>7</span></a></li>
+								<li data-keypad-num="8"><a><span>8</span></a></li>
+								<li data-keypad-num="9"><a><span>9</span></a></li>
+								<li data-keypad-num="."><a><span>.</span></a></li>
+								<li data-keypad-num="0"><a><span>0</span></a></li>
+								<li data-keypad-num=""><a class="backspace"><span></span></a></li>
+							</ul>
+						</div>
+					<div class="message">
+						message goes here
+					</div>		
+				</div>
+
+				<div class="content has-phases">
+					<div class="current-settings vehicle phase header">
+						<div class="label"><span>Phase</span></div>
+						<div class="values">
+							<ul></ul>
+						</div>
+					</div>
+					<div class="current-settings enabled">
+						<div class="label"><span>Enabled</span></div>
+						<div class="values">
+							<ul></ul>
+						</div>
+					</div>		
+					<div class="current-settings keypad max-green">
+						<div class="label"><span>Max Dynamic Max Green</span></div>
+						<div class="values">
+							<ul></ul>
+						</div>
+					</div>		
+					<div class="current-settings keypad adjustment-step-up">
+						<div class="label"><span>Adjustment Step Up</span></div>
+						<div class="values">
+							<ul></ul>
+						</div>
+					</div>		
+					<div class="current-settings keypad adjustment-step-down">
+						<div class="label"><span>Adjustment Step Down</span></div>
+						<div class="values">
+							<ul></ul>
+						</div>
+					</div>																										
+				</div>
+				<div class="bottom-strip">
+					<div data-panel="home" id="go-straight-home" class="go-straight-home">home</div>
+					<!--
+					<div class="page-left disabled"></div>
+					<div class="page-right disabled"></div>
+					-->
+				</div>
+			</div>
+
+
+<!-- ************************************************************** -->
+
+
+			<div id="config-vehicle-detectors" class="panel config config-vehicle-detectors">
+				<div class="names">
+					<div class="intersection-name-frame"><span></span></div>
+					<div class="configuration-name-frame"><span></span></div>
+				</div>	
+				<a href="#" id="go-straight-back" class="go-straight-back" data-panel="config-detail-home"></a>
+				<div class="access-lock"><a href="#"></a></div>
+				<a class="save"></a>
+				<div class="title"><span>Vehicle Detectors</span></div>
+
+			<div class="overlay timing">
+				<div class="blurry-bg"></div>
+				<div class="cancel"></div>
+				<div class="set"></div>
+				<div class="current-info">
+					<div class="has-phase">
+						<label>Detector:</label>
+						<div></div>
+					</div>
+					<div class="current-timing-entry">
+						<label>Current ??):</label>
+						<div class="value"><span>1</span></div>
+					</div>
+					<div class="new-timing">
+						<label>New ??:</label>
+						<div class="value"><span></span></div>
+					</div>											
+				</div>
+					<div>
+						<input type="hidden" id="value-entered" />
+						<input type="hidden" id="item-to-update" />
+						<ul class="keypad">
+							<li data-keypad-num="1"><a><span>1</span></a></li>
+							<li data-keypad-num="2"><a><span>2</span></a></li>
+							<li data-keypad-num="3"><a><span>3</span></a></li>
+							<li data-keypad-num="4"><a><span>4</span></a></li>
+							<li data-keypad-num="5"><a><span>5</span></a></li>
+							<li data-keypad-num="6"><a><span>6</span></a></li>
+							<li data-keypad-num="7"><a><span>7</span></a></li>
+							<li data-keypad-num="8"><a><span>8</span></a></li>
+							<li data-keypad-num="9"><a><span>9</span></a></li>
+							<li data-keypad-num="."><a><span>.</span></a></li>
+							<li data-keypad-num="0"><a><span>0</span></a></li>
+							<li data-keypad-num=""><a class="backspace"><span></span></a></li>
+						</ul>
+					</div>
+			</div>
+
+				<div class="content has-phases">
+					<div class="current-settings detectors phase">
+						<div class="label"><span>Detector</span></div>
+						<div class="values">
+							<ul></ul>
+						</div>
+					</div>
+					<div class="current-settings lock-detection">
+						<div class="label"><span>Lock Detection</span></div>
+						<div class="values">
+							<ul></ul>
+						</div>
+					</div>		
+					<div class="current-settings keypad delay">
+						<div class="label"><span>Delay</span></div>
+						<div class="values">
+							<ul></ul>
+						</div>
+					</div>		
+					<div class="current-settings keypad extend">
+						<div class="label"><span>Extend</span></div>
+						<div class="values">
+							<ul></ul>
+						</div>
+					</div>
+					<div class="current-settings keypad stuck-on">
+						<div class="label"><span>Stuck ON: Elapsed Time</span></div>
+						<div class="values">
+							<ul></ul>
+						</div>
+					</div>
+					<div class="current-settings keypad stuck-off">
+						<div class="label"><span>Stuck OFF: Elapsed Time</span></div>
+						<div class="values">
+							<ul></ul>
+						</div>
+					</div>
+					<div class="current-settings enable-call">
+						<div class="label"><span>Enable Call on Failure</span></div>
+						<div class="values">
+							<ul></ul>
+						</div>
+					</div>																																
+					<div class="current-settings keypad phase-assignment">
+						<div class="label"><span>Phase Assignment</span></div>
+						<div class="values">
+							<ul></ul>
+						</div>
+					</div>
+				</div>
+				<div class="bottom-strip">
+					<div data-panel="home" id="go-straight-home" class="go-straight-home">home</div>
+					<!--
+					<div class="page-left disabled"></div>
+					<div class="page-right"></div>
+					-->
+				</div>
+			</div>
+
+<!-- ************************************************************** -->
+
+			<div id="config-ped-detectors" class="panel config config-ped-detectors">
+				<div class="names">
+					<div class="intersection-name-frame"><span></span></div>
+					<div class="configuration-name-frame"><span></span></div>
+				</div>	
+				<a href="#" id="go-straight-back" class="go-straight-back" data-panel="config-detail-home"></a>
+				<div class="access-lock"><a href="#"></a></div>
+				<a class="save"></a>
+				<div class="title"><span>Pedestrian Detectors</span></div>
+
+			<div class="overlay timing">
+				<div class="blurry-bg"></div>
+				<div class="cancel"></div>
+				<div class="set"></div>
+				<div class="current-info">
+					<div class="has-phase">
+						<label>Detector:</label>
+						<div></div>
+					</div>
+					<div class="current-timing-entry">
+						<label>Current ??):</label>
+						<div class="value"><span>1</span></div>
+					</div>
+					<div class="new-timing">
+						<label>New ??:</label>
+						<div class="value"><span></span></div>
+					</div>											
+				</div>
+					<div>
+						<input type="hidden" id="value-entered" />
+						<input type="hidden" id="item-to-update" />
+						<ul class="keypad">
+							<li data-keypad-num="1"><a><span>1</span></a></li>
+							<li data-keypad-num="2"><a><span>2</span></a></li>
+							<li data-keypad-num="3"><a><span>3</span></a></li>
+							<li data-keypad-num="4"><a><span>4</span></a></li>
+							<li data-keypad-num="5"><a><span>5</span></a></li>
+							<li data-keypad-num="6"><a><span>6</span></a></li>
+							<li data-keypad-num="7"><a><span>7</span></a></li>
+							<li data-keypad-num="8"><a><span>8</span></a></li>
+							<li data-keypad-num="9"><a><span>9</span></a></li>
+							<li data-keypad-num="."><a><span>.</span></a></li>
+							<li data-keypad-num="0"><a><span>0</span></a></li>
+							<li data-keypad-num=""><a class="backspace"><span></span></a></li>
+						</ul>
+					</div>
+			</div>
+
+
+				<div class="content has-phases">
+					<div class="current-settings detectors phase">
+						<div class="label"><span>Detector</span></div>
+						<div class="values">
+							<ul></ul>
+						</div>
+					</div>																															
+					<div class="current-settings keypad phase-assignment">
+						<div class="label"><span>Phase Assignment</span></div>
+						<div class="values">
+							<ul></ul>
+						</div>
+					</div>
+				</div>
+				<div class="bottom-strip">
+					<div data-panel="home" id="go-straight-home" class="go-straight-home">home</div>
+					<div class="page-left disabled"></div>
+					<div class="page-right"></div>
+					<input type="hidden" value="1"/>
+				</div>
+			</div>
+
+<!-- ************************************************************** -->
+
+		<div id="status-detectors" class="panel status-detectors">
+			<div class="configuration-name-frame"><span></span></div>
+			<a href="#" id="go-straight-back" class="go-straight-back" data-panel="home"></a>
+			<div class="access-lock"><a href="#"></a></div>
+			<div class="title"><span>Detection Status</span></div>
+
+			<div class="content">
+				<ul class="vehicle-status">		
+				</ul>
+				<ul class="pedestrian-status">
+				</ul>																						
+			</div>
+			<div class="bottom-strip">
+	<!--			<div data-panel="home" class="go-back"></div>
+				<div data-panel="home" id="go-straight-home" class="go-straight-home">home</div> -->
+				<div class="detection-toggle">
+					<ul>
+						<li class="show-vehicle-detection on"><a></a></li>
+						<li class="show-ped-detection"><a></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+<!-- ************************************************************** -->
+
+		<div class="panel password-entry">
+			<div class="keypad">
+			<ul class="buttons">
+				<li><div><span>1</span></div></li>
+				<li><div><span>2</span></div></li>
+				<li><div><span>3</span></div></li>
+				<li><div><span>4</span></div></li>
+				<li><div><span>5</span></div></li>
+				<li><div><span>6</span></div></li>
+				<li><div><span>7</span></div></li>
+				<li><div><span>8</span></div></li>
+				<li><div><span>9</span></div></li>
+				<li><div><span>?</span></div></li>
+				<li><div><span>0</span></div></li>
+				<li><div><span>Cancel</span></div></li>
+			</ul>
+			</div>
+			<div class="bottom-strip">
+				<div class="go-home"><span>Home</span></div>
+			</div>
+		</div>
+
+<!-- ************************************************************** -->
+
+		<div class="panel usb">
+			<a href="#" class="go-straight-home">home</a>
+			<div class="title-bar"></div>
+
+			<div class="content">
+					<div class="in-progress"></div>
+					<div class="usb-upload"><div class="success"></div></div>
+					<div class="usb-download"><div class="success"></div></div>
+					<div class="firmware"><div class="success"></div></div>
+			</div>
+			<div class="bottom-strip">
+				<div class="go-home"></div>
+			</div>
+		</div>
+
+
+
+<!-- ************************************************************** -->
+
+
+		<div id="config-vehicle-phase-timing" class="panel config config-vehicle-phase-timing">
+			<div class="names">
+				<div class="intersection-name-frame"><span></span></div>
+				<div class="configuration-name-frame"><span></span></div>
+			</div>	
+			<a href="#" id="go-straight-back" class="go-straight-back" data-panel="config-detail-home"></a>
+			<a class="save"></a>
+			<div class="title"><span>Vehicle Phases</span></div>
+
+
+			<div class="overlay timing">
+				<div class="blurry-bg"></div>
+				<div class="cancel"></div>
+				<div class="set"></div>
+				<div class="current-info">
+					<div class="has-phase">
+						<label>Phase:</label>
+						<div></div>
+					</div>
+					<div class="current-timing-entry">
+						<label>Current ??):</label>
+						<div class="value"><span>1</span></div>
+					</div>
+					<div class="new-timing">
+						<label>New ??:</label>
+						<div class="value"><span></span></div>
+					</div>											
+				</div>
+					<div>
+						<input type="hidden" id="value-entered" />
+						<input type="hidden" id="item-to-update" />
+						<ul class="keypad">
+							<li data-keypad-num="1"><a><span>1</span></a></li>
+							<li data-keypad-num="2"><a><span>2</span></a></li>
+							<li data-keypad-num="3"><a><span>3</span></a></li>
+							<li data-keypad-num="4"><a><span>4</span></a></li>
+							<li data-keypad-num="5"><a><span>5</span></a></li>
+							<li data-keypad-num="6"><a><span>6</span></a></li>
+							<li data-keypad-num="7"><a><span>7</span></a></li>
+							<li data-keypad-num="8"><a><span>8</span></a></li>
+							<li data-keypad-num="9"><a><span>9</span></a></li>
+							<li data-keypad-num="."><a><span>.</span></a></li>
+							<li data-keypad-num="0"><a><span>0</span></a></li>
+							<li data-keypad-num=""><a class="backspace"><span></span></a></li>
+						</ul>
+					</div>
+					<div class="message">
+						message goes here
+					</div>	
+			</div>
+
+
+			<div class="content has-phases">
+				<div class="current-settings vehicle phase header">
+					<div class="label"><span>Phase</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>
+				<div class="current-settings vehicle vehicle-enabled">
+					<div class="label"><span>Enabled</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>				
+				<div class="current-settings one-call">
+					<div class="label"><span>One Call on Startup</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>	
+				<div class="current-settings recall">
+					<div class="label has-cycler"><span>Recall</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>					
+				<div class="current-settings keypad min-green-timing">
+					<div class="label"><span>Min Green Timing</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>
+				<div class="current-settings keypad max-green-timing">
+					<div class="label"><span>Max Green Timing</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>				
+				<div class="current-settings keypad yellow-timing">
+					<div class="label"><span>Yellow Timing</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>				
+				<div class="current-settings keypad red-timing">
+					<div class="label"><span>Red Timing</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>			
+				<div class="current-settings keypad passage-time">
+					<div class="label"><span>Passage Time</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>
+																											
+			</div>
+			<div class="bottom-strip">
+				<div data-panel="home" id="go-straight-home" class="go-straight-home">home</div>
+				
+				<div class="page-up"></div>
+				<div class="page-down"></div>
+				
+			</div>
+		</div>
+
+<!-- ************************************************************** -->
+
+
+		<div id="schedule-list-weekly" class="panel schedule schedule-list-weekly">
+			<div class="names">
+				<div class="intersection-name-frame"><span></span></div>
+			</div>	
+			<a href="#" id="go-straight-back" class="go-straight-back" data-panel="schedule-overview"></a>
+			<a class="save"></a>
+			<div class="title"><span>Weekly Schedule List</span></div>
+
+			<div class="overlay confirm-schedule-delete">
+				<div class="blurry-bg"></div>
+				<div class="cancel"></div>
+				<div class="set"></div>			
+				<div class="confirm-title">Are you sure you want to delete this schedule?</div>
+				<div class="confirm-subtitle">Tap the 'OK' button to confirm deletion of this schedule.</div>
+			</div>
+
+			<div class="overlay schedule-def">
+				<div class="blurry-bg"></div>
+				<div class="cancel"></div>
+				<div class="set"></div>
+					<input type="hidden" id="sched-to-update" value="0" />
+					<input type="hidden" id="operation-mode" value="update" />
+					<div class="multi-weekday-selection">
+						<label>Day(s) of the Week:</label>
+						<div>
+							<ul>
+								<li><a data-dow="1">Mon</a></li>
+								<li><a data-dow="2">Tue</a></li>
+								<li><a data-dow="4">Wed</a></li>
+								<li><a data-dow="8">Thu</a></li>
+								<li><a data-dow="16">Fri</a></li>
+								<li><a data-dow="32">Sat</a></li>
+								<li><a data-dow="64">Sun</a></li>
+							</ul>
+						</div>	
+						<input type="hidden" id="weekday-sel" value="0"/>				
+					</div>	
+					<div class="weekday-selection">
+						<label>Day of the Week:</label>
+						<div>
+							<span>Mon</span>
+							<div class="increment"></div>
+							<div class="decrement"></div>
+						</div>	
+						<input type="hidden" id="weekday-sel" value="0"/>				
+					</div>	
+					<div class="configuration-selection">
+						<label>Configuration to run:</label>
+						<div>
+							<span></span>
+							<div class="increment"></div>
+							<div class="decrement"></div>
+						</div>	
+						<input type="hidden" id="config-sel" value="0"/>				
+					</div>																
+					<div class="start-time-selection">
+						<label>Start Time:</label>
+						<div class="start-time-hour">
+							<span>0:</span>
+							<div class="increment"></div>
+							<div class="decrement"></div>
+						</div>	
+						<div class="start-time-min">
+							<span>00</span>
+							<div class="increment"></div>
+							<div class="decrement"></div>
+						</div>													
+						<input type="hidden" id="start-hour-sel" value="0"/>
+						<input type="hidden" id="start-min-sel" value="0"/>				
+					</div>
+ 					<div class="end-time-selection">
+						<label>End Time:</label>
+						<div class="end-time-hour">
+							<span>0:</span>
+							<div class="increment"></div>
+							<div class="decrement"></div>
+						</div>	
+						<div class="end-time-min">
+							<span>00</span>
+							<div class="increment"></div>
+							<div class="decrement"></div>
+						</div>													
+						<input type="hidden" id="end-hour-sel" value="0"/>
+						<input type="hidden" id="end-min-sel" value="0"/>				
+					</div>	 				
+			</div>
+
+
+			<div class="content">
+				<ul>
+				</ul>
+			</div>
+			<div class="bottom-strip">
+				<div data-panel="home" id="go-straight-home" class="go-straight-home">home</div>
+				<div class="page-up"><span></span></div>
+				<div class="page-down"><span></span></div>		
+				<div class="dow-filter">
+					<ul>
+						<li class="dow-filter-day" data-dow="1">Mon</li>
+						<li class="dow-filter-day" data-dow="2">Tue</li>
+						<li class="dow-filter-day" data-dow="4">Wed</li>
+						<li class="dow-filter-day" data-dow="8">Thu</li>
+						<li class="dow-filter-day" data-dow="16">Fri</li>
+						<li class="dow-filter-day" data-dow="32">Sat</li>
+						<li class="dow-filter-day" data-dow="64">Sun</li>
+					</ul>
+				</div>
+				<input type="hidden" id="set-count" value="0" />		
+			</div>
+		</div>
+
+<!-- ************************************************************** -->
+
+
+		<div id="schedule-overview" class="panel schedule schedule-overview">
+			<div class="names">
+				<div class="intersection-name-frame"><span></span></div>
+			</div>	
+			<a href="#" id="go-straight-back" class="go-straight-back" data-panel="home"></a>
+			<a class="save"></a>
+			<div class="title"><span>Schedule Overview</span></div>
+
+
+
+			<div class="overlay schedule-config-default">
+				<div class="blurry-bg"></div>
+				<div class="cancel"></div>
+				<div class="set"></div>
+
+					<div class="configuration-selection">
+						<label>Default Configuration to run:</label>
+						<div>
+							<span>Base Configuration</span>
+							<div class="increment"></div>
+							<div class="decrement"></div>
+						</div>	
+						<input type="hidden" id="config-sel" value="0"/>				
+					</div>																				
+			</div>
+
+
+			<div class="content">
+				<ul>
+					<li class="schedule-weekly-link"><div><a>Weekly Schedule</a></div></li>
+					<li class="schedule-special-link"><div><a>Special Event(s)</a></div></li>
+				</ul>
+			</div>
+			<div class="bottom-strip">
+				<div data-panel="home" id="go-straight-home" class="go-straight-home">home</div>			
+			</div>
+		</div>
+
+<!-- ************************************************************** -->
+
+		<div id="schedule-list-special" class="panel schedule schedule-list-special">
+			<div class="names">
+				<div class="intersection-name-frame"><span></span></div>
+			</div>	
+			<a href="#" id="go-straight-back" class="go-straight-back" data-panel="schedule-overview"></a>
+			<div class="title"><span>Special Event</span></div>
+			<a class="save"></a>
+
+			<div class="overlay confirm-schedule-delete">
+				<div class="blurry-bg"></div>
+				<div class="cancel"></div>
+				<div class="set"></div>			
+				<div class="confirm-title">Are you sure you want to delete this schedule?</div>
+				<div class="confirm-subtitle">Tap the 'OK' button to confirm deletion of this schedule.</div>
+			</div>
+
+			<div class="overlay schedule-def">
+				<div class="blurry-bg"></div>
+				<div class="cancel"></div>
+				<div class="set"></div>
+					<input type="hidden" id="sched-to-update" value="0" />
+					<input type="hidden" id="operation-mode" value="update" />
+
+					<div class="configuration-selection">
+						<label>Configuration to run:</label>
+						<div>
+							<span></span>
+							<div class="increment"></div>
+							<div class="decrement"></div>
+						</div>	
+						<input type="hidden" id="config-sel" value="0"/>				
+					</div>																
+					<div class="start-date-selection">
+						<label>Start Date:</label>
+						<div class="start-date-year">
+							<span>2013</span>
+							<div class="increment"></div>
+							<div class="decrement"></div>
+						</div>	
+						<div class="start-date-month">
+							<span>12</span>
+							<div class="increment"></div>
+							<div class="decrement"></div>
+						</div>	
+						<div class="start-date-day">
+							<span>28</span>
+							<div class="increment"></div>
+							<div class="decrement"></div>
+						</div>																			
+						<input type="hidden" id="start-year-sel" value="2016"/>
+						<input type="hidden" id="start-month-sel" value="1"/>	
+						<input type="hidden" id="start-day-sel" value="1"/>				
+					</div>
+					<div class="start-time-selection">
+						<label>Start Time:</label>
+						<div class="start-time-hour">
+							<span>0:</span>
+							<div class="increment"></div>
+							<div class="decrement"></div>
+						</div>	
+						<div class="start-time-min">
+							<span>00</span>
+							<div class="increment"></div>
+							<div class="decrement"></div>
+						</div>													
+						<input type="hidden" id="start-hour-sel" value="0"/>
+						<input type="hidden" id="start-min-sel" value="0"/>				
+					</div>
+					<div class="end-date-selection">
+						<label>End Date:</label>
+						<div class="end-date-year">
+							<span>2014</span>
+							<div class="increment"></div>
+							<div class="decrement"></div>
+						</div>	
+						<div class="end-date-month">
+							<span>12</span>
+							<div class="increment"></div>
+							<div class="decrement"></div>
+						</div>	
+						<div class="end-date-day">
+							<span>28</span>
+							<div class="increment"></div>
+							<div class="decrement"></div>
+						</div>																			
+						<input type="hidden" id="end-year-sel" value="2016"/>
+						<input type="hidden" id="end-month-sel" value="1"/>
+						<input type="hidden" id="end-day-sel" value="1"/>				
+					</div>					
+ 					<div class="end-time-selection">
+						<label>End Time:</label>
+						<div class="end-time-hour">
+							<span>0:</span>
+							<div class="increment"></div>
+							<div class="decrement"></div>
+						</div>	
+						<div class="end-time-min">
+							<span>00</span>
+							<div class="increment"></div>
+							<div class="decrement"></div>
+						</div>													
+						<input type="hidden" id="end-hour-sel" value="0"/>
+						<input type="hidden" id="end-min-sel" value="0"/>				
+					</div>	 				
+			</div>
+
+
+				<div class="content">
+				<ul>
+					<li class="add-new-schedule"><div>Add a New Special Event</div></li>
+					<li class="update-schedule" data-schedule-loc="0" data-config-loc="0"><div class="del-schedule">Del</div><div class="start-date-time">2016-04-10 21:00 to<br/> 2016-04-11 05:00</div><div class="config-name">Base Configuration</div><div class="status-schedule">Expired</div></li>
+					<li class="update-schedule" data-schedule-loc="0" data-config-loc="0"><div class="del-schedule">Del</div><div class="start-date-time">2016-09-10 21:00 to<br/> 2016-09-11 05:00</div><div class="config-name">Base Configuration</div><div class="status-schedule"></div></li>					
+				</ul>
+				</div>
+				<div class="bottom-strip">
+					<div data-panel="home" id="go-straight-home" class="go-straight-home">home</div>
+					<div class="page-up"><span></span></div>
+					<div class="page-down"><span></span></div>	
+					<input type="hidden" id="set-count" value="0" />				
+				</div>
+
+		</div>
+	
+
+
+<!-- ************************************************************** -->
+<!--
+		<div class="panel update-firmware">
+			<div class="configuration-name-frame"></div>
+			<a href="#" class="go-straight-home">home</a>
+			<div class="access-lock"><a href="#"></a></div>
+			<a class="save"></a>
+			<div class="title"><span>Update Firmware</span></div>
+			<div class="content">
+				<label>What will happen next:</label>
+				<ul>
+					<li>
+						<div class="copy">Firmware updates will be applied.</div>
+						<div class="icon"><span class="step">1</span></div>
+					</li>
+					<li>
+						<div class="copy">System will restart.</div>
+						<div class="icon"><span class="step">2</span></div>
+					</li>
+					<li>
+						<div class="copy">Home screen will be displayed.</div>
+						<div class="icon"><span class="step">3</span></div>
+					</li>
+				</ul>
+				<div class="warning">The firmware version on the USB is OLDER than the version that will be replaced.</div>
+			</div>
+			<div class="bottom-strip">
+				<div data-panel="usb-options-panel" class="go-back"></div>
+				<div class="start"></div>
+			</div>
+		</div>
+-->
+<!-- ************************************************************** -->
+
+		<div id="schedule-summary" class="panel schedule schedule-summary">
+			<div class="configuration-name-frame"></div>
+			<a href="#" id="go-straight-back" class="go-straight-back" data-panel="home"></a>
+			<div class="access-lock"><a href="#"></a></div>
+			<a class="save"></a>
+			<div class="title schedule"></div>
+			<div class="content">
+				
+				<ul>
+					<li class="active"><a href="#" class="show-schedule-summary">Summary</a></li>
+					<li><a href="#" class="show-weekly-schedule">Weekly Schedule</a></li>
+					<li><a href="#" class="show-special-event">Special Event</a></li>
+					<li><a>Conditional Event</a></li>
+				</ul>
+
+				<table>
+					<tbody>
+						<tr>
+							<td>Mo</td>
+							<td></td>
+							<!-- <td><div><span class="weekly" style="left:30%;width: 20%;"></span></div></td> -->
+						</tr>	
+						<tr>
+							<td>Tu</td>
+							<td></td>
+<!-- 							<td><div><span class="weekly" style="left:30%;width: 15%;"></span><span class="special" style="left:45%;width: 5%;"></span></div></td> -->
+						</tr>	
+						<tr>
+							<td>We</td>
+							<td><div></div></td>
+						</tr>	
+						<tr>
+							<td>Th</td>
+							<td><div></div></td>
+						</tr>	
+						<tr>
+							<td>Fr</td>
+							<td><div></div></td>
+						</tr>														
+						<tr>
+							<td>Sa</td>
+							<td><div></div></td>
+						</tr>
+						<tr>
+							<td>Su</td>
+							<td><div></div></td>
+						</tr>																	
+					</tbody>
+					<tfoot>
+						<tr>
+							<td></td>
+							<td>
+								<ul class="legend">
+									<li class="base"><span></span>Base</li>
+									<li class="weekly"><span></span>Weekly</li>
+									<li class="special"><span></span>Special</li>
+									<li class="conditional"><span></span>Conditional</li>
+								</ul>
+							</td>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+			<div class="bottom-strip">
+				<div data-panel="home" class="go-back"></div>
+				<div class="schedule-summary-date">2015-07-06 to 2015-07-12</div>
+				<div class="page-left"><span></span></div>
+				<div class="page-right"><span></span></div>	
+			</div>
+		</div>
+
+
+<!-- ************************************************************** -->
+<!--
+		<div class="panel schedule-new schedule-new-weekly">
+			<div class="configuration-name-frame"></div>
+			<a href="#" class="go-straight-home">home</a>
+			<div class="access-lock"><a href="#"></a></div>
+			<a class="save"></a>
+			<div class="title schedule"></div>
+			<div class="content">
+					<div class="configuration-selection">
+						<label>Configuration:</label>
+						<ul>
+							<li class="up"></li>
+							<li>AM Peak Traffic</li>
+							<li class="down"></li>
+						</ul>
+					</div>			
+				<div class="weekday-selection">
+					<label>Day(s) of the Week:</label>
+					<ul class="day-option">
+						<li></li>
+						<li>
+							<ul>
+								<li class="active">Mo</li>
+								<li class="active">Tu</li>
+								<li>We</li>
+								<li>Th</li>
+								<li>Fr</li>
+								<li>Sa</li>
+								<li>Su</li>
+							</ul>
+						</li>
+						<li></li>
+					</ul>
+				</div>
+				<div class="start-time-selection">
+					<label>Start Time:</label>
+					<ul class="time-hour">
+						<li class="up"></li>
+						<li class="value">12</li>
+						<li class="down"></li>
+					</ul>
+					<ul class="time-separator time-separator-1">
+						<li></li>
+						<li>:</li>
+						<li></li>
+					</ul>
+					<ul class="time-minute">
+						<li class="up"></li>
+						<li class="value">00</li>
+						<li class="down"></li>
+					</ul>		
+
+				</div>				
+				<div class="end-time-selection">
+					<label>End Time:</label>
+					<ul class="time-hour">
+						<li class="up"></li>
+						<li clas="value">14</li>
+						<li class="down"></li>
+					</ul>
+					<ul class="time-separator time-separator-1">
+						<li></li>
+						<li>:</li>
+						<li></li>
+					</ul>
+					<ul class="time-minute">
+						<li class="up"></li>
+						<li class="value">30</li>
+						<li class="down"></li>
+					</ul>
+		
+				</div>	
+				<div class="message">
+					<ul>
+						<li>This schedule is already in use.</li>
+					</ul>
+				</div>				
+			</div>
+			<div class="bottom-strip">
+				<div data-panel="schedule-summary" class="go-back"></div>
+				<div data-panel="schedule-summary" class="remove"></div>
+			</div>
+-->
+<!-- ************************************************************** -->
+<!--
+		<div class="panel schedule-new schedule-new-special">
+			<div class="configuration-name-frame"></div>
+			<a href="#" class="go-straight-home">home</a>
+			<div class="access-lock"><a href="#"></a></div>
+			<a class="save"></a>
+			<div class="title schedule"></div>
+			<div class="content">
+					<div class="configuration-selection">
+						<label>Configuration:</label>
+						<ul>
+							<li class="up"></li>
+							<li>AM Peak Traffic</li>
+							<li class="down"></li>
+						</ul>
+					</div>
+
+					<div class="month-selection-start">
+						<label>Start Date:</label>
+						<ul class="day-option">
+							<li class="up"></li>
+							<li>Nov</li>
+							<li class="down"></li>
+						</ul>
+					</div>
+					<div class="day-selection-start">
+						<ul class="day-option">
+							<li class="up"></li>
+							<li>29</li>
+							<li class="down"></li>
+						</ul>
+					</div>	
+					<div class="year-selection-start">
+						<ul class="day-option">
+							<li class="up"></li>
+							<li>2015</li>
+							<li class="down"></li>
+						</ul>
+					</div>
+								
+				<div class="start-time-selection">
+					<label>Start Time:</label>
+					<ul class="time-hour">
+						<li class="up"></li>
+						<li>12</li>
+						<li class="down"></li>
+					</ul>
+					<ul class="time-separator time-separator-1">
+						<li></li>
+						<li>:</li>
+						<li></li>
+					</ul>
+					<ul class="time-minute">
+						<li class="up"></li>
+						<li>00</li>
+						<li class="down"></li>
+					</ul>		
+
+				</div>		
+
+					<div class="month-selection-end">
+						<label>End Date:</label>
+						<ul class="day-option">
+							<li class="up"></li>
+							<li>Nov</li>
+							<li class="down"></li>
+						</ul>
+					</div>
+					<div class="day-selection-end">
+						<ul class="day-option">
+							<li class="up"></li>
+							<li>29</li>
+							<li class="down"></li>
+						</ul>
+					</div>	
+					<div class="year-selection-end">
+						<ul class="day-option">
+							<li class="up"></li>
+							<li>2015</li>
+							<li class="down"></li>
+						</ul>
+					</div>
+
+				<div class="end-time-selection">
+					<label>End Time:</label>
+					<ul class="time-hour">
+						<li class="up"></li>
+						<li>14</li>
+						<li class="down"></li>
+					</ul>
+					<ul class="time-separator time-separator-1">
+						<li></li>
+						<li>:</li>
+						<li></li>
+					</ul>
+					<ul class="time-minute">
+						<li class="up"></li>
+						<li>30</li>
+						<li class="down"></li>
+					</ul>
+		
+				</div>	
+				<div class="message">
+					<ul>
+						<li>Start Date cannot be later than the End Date.</li>
+					</ul>
+				</div>				
+			</div>
+			<div class="bottom-strip">
+				<div data-panel="schedule-summary" class="go-back"></div>
+			</div>
+		</div>
+-->
+<!-- ************************************************************** -->
+
+		<div id="intersection-status-view" class="panel intersection-status-view">
+			<div class="configuration-name-frame"><span></span></div>
+			<a href="#" id="go-straight-back" class="go-straight-back" data-panel="home"></a>
+			<div class="title"><span>Intersection Status</span></div>
+
+			<div class="content">
+
+			</div>
+		</div>
+
+<!-- ************************************************************** -->
+
+		<div id="vf6-settings" class="panel vf6-settings">
+			<div class="names">
+				<div class="intersection-name-frame"><span></span></div>
+			</div>	
+			<a href="#" id="go-straight-back" class="go-straight-back" data-panel="home"></a>
+			<a class="set"></a>
+			<div class="title"><span>Network Settings</span></div>
+
+
+				<div class="overlay timing">
+					<div class="blurry-bg"></div>
+					<div class="cancel"></div>
+					<div class="set"></div>
+					<div class="current-info">
+						<div class="current-timing-entry">
+							<label>Current ??):</label>
+							<div class="value"><span>1</span></div>
+						</div>
+						<div class="new-timing">
+							<label>New ??:</label>
+							<div class="value"><span></span></div>
+						</div>											
+					</div>
+						<div>
+							<input type="hidden" id="value-entered" />
+							<input type="hidden" id="item-to-update" />
+							<ul class="keypad">
+								<li data-keypad-num="1"><a><span>1</span></a></li>
+								<li data-keypad-num="2"><a><span>2</span></a></li>
+								<li data-keypad-num="3"><a><span>3</span></a></li>
+								<li data-keypad-num="4"><a><span>4</span></a></li>
+								<li data-keypad-num="5"><a><span>5</span></a></li>
+								<li data-keypad-num="6"><a><span>6</span></a></li>
+								<li data-keypad-num="7"><a><span>7</span></a></li>
+								<li data-keypad-num="8"><a><span>8</span></a></li>
+								<li data-keypad-num="9"><a><span>9</span></a></li>
+								<li data-keypad-num="."><a><span>.</span></a></li>
+								<li data-keypad-num="0"><a><span>0</span></a></li>
+								<li data-keypad-num=""><a class="backspace"><span></span></a></li>
+							</ul>
+						</div>
+				</div>
+
+
+			<div class="content has-phases">	
+
+<!-- 				<div class="current-settings time-out keypad">
+					<div class="label"><span>Time Out</span></div>
+					<div class="values has-popup">
+						<div data-category="time-out"></div>
+					</div>
+				</div>	 -->
+
+				<div class="current-settings eth0-ipv4 keypad">
+					<div class="label"><span>IP Address</span></div>
+					<div class="values has-popup">
+						<div data-category="eth0-ipv4"></div>
+					</div>
+				</div>	
+				<div class="current-settings eth0-ipv4-subnet keypad">
+					<div class="label"><span>Subnet Mask</span></div>
+					<div class="values has-popup">
+						<div data-category="eth0-subnet"><span class="subnet-text"></span><span class="cidr"></span></div>
+					</div>
+				</div>	
+
+				<div class="current-settings ipv4-gateway keypad">
+					<div class="label"><span>Gateway</span></div>
+					<div class="values has-popup">
+						<div data-category="ipv4-gateway"></div>
+					</div>
+				</div>						
+				<div class="current-settings eth0-mac">
+					<div class="label"><span>Mac Address</span></div>
+					<div class="values has-popup">
+						<div data-category="eth0-mac"></div>
+					</div>
+				</div>																										
+			</div>
+			<div class="bottom-strip">
+				<div data-panel="home" id="go-straight-home" class="go-straight-home">home</div>		
+			</div>
+		</div>
+
+<!-- ************************************************************** -->
+
+		<div id="date-time-settings" class="panel">
+			<div class="names">
+				<div class="intersection-name-frame"><span></span></div>
+			</div>	
+			<a href="#" id="go-straight-back" class="go-straight-back" data-panel="home"></a>
+			<a class="set"></a>
+			<div class="title"><span>Date / Time</span></div>
+
+
+				<div class="overlay timing">
+					<div class="blurry-bg"></div>
+					<div class="cancel"></div>
+					<div class="set"></div>
+					<div class="current-info">
+						<div class="current-timing-entry">
+							<label>Current ??):</label>
+							<div class="value"><span>1</span></div>
+						</div>
+						<div class="new-timing">
+							<label>New ??:</label>
+							<div class="value"><span></span></div>
+						</div>											
+					</div>
+						<div>
+							<input type="hidden" id="value-entered" />
+							<input type="hidden" id="item-to-update" />
+							<ul class="keypad">
+								<li data-keypad-num="1"><a><span>1</span></a></li>
+								<li data-keypad-num="2"><a><span>2</span></a></li>
+								<li data-keypad-num="3"><a><span>3</span></a></li>
+								<li data-keypad-num="4"><a><span>4</span></a></li>
+								<li data-keypad-num="5"><a><span>5</span></a></li>
+								<li data-keypad-num="6"><a><span>6</span></a></li>
+								<li data-keypad-num="7"><a><span>7</span></a></li>
+								<li data-keypad-num="8"><a><span>8</span></a></li>
+								<li data-keypad-num="9"><a><span>9</span></a></li>
+								<li data-keypad-num="."><a><span>.</span></a></li>
+								<li data-keypad-num="0"><a><span>0</span></a></li>
+								<li data-keypad-num=""><a class="backspace"><span></span></a></li>
+							</ul>
+						</div>
+				</div>
+
+
+			<div class="content has-phases">				
+				<div class="current-settings settings-date">
+					<div class="label"><span>Date</span></div>
+					<div class="values has-popup">
+						<div data-category="time-zone"></div>
+					</div>
+				</div>	
+				<div class="current-settings settings-time">
+					<div class="label"><span>Time</span></div>
+					<div class="values has-popup">
+						<div data-category="time-zone"></div>
+					</div>
+				</div>					
+				<div class="current-settings time-zone">
+					<div class="label"><span>Time Zone</span></div>
+					<div class="values has-popup">
+						<div data-category="time-zone"></div>
+					</div>
+				</div>	
+				<div class="current-settings ntp-server-1">
+					<div class="label"><span>NTP Server 1</span></div>
+					<div class="values has-popup">
+						<div data-category="ntp-server-1"></div>
+					</div>
+				</div>																														<div class="current-settings ntp-server-2">
+					<div class="label"><span>NTP Server 2</span></div>
+					<div class="values has-popup">
+						<div data-category="ntp-server-2"></div>
+					</div>
+				</div>				
+			</div>
+			<div class="bottom-strip">
+				<div data-panel="home" id="go-straight-home" class="go-straight-home">home</div>			
+			</div>
+		</div>
+
+<!-- ************************************************************** -->
+
+		<div id="system-id-settings" class="panel system-id-settings">
+			<div class="names">
+				<div class="intersection-name-frame"><span></span></div>
+			</div>	
+			<a href="#" id="go-straight-back" class="go-straight-back" data-panel="home"></a>
+			<a class="set"></a>
+			<div class="title"><span>System ID</span></div>
+
+
+				<div class="overlay timing">
+					<div class="blurry-bg"></div>
+					<div class="cancel"></div>
+					<div class="set"></div>
+					<div class="current-info">
+						<div class="current-timing-entry">
+							<label>Current ??):</label>
+							<div class="value"><span>1</span></div>
+						</div>
+						<div class="new-timing">
+							<label>New ??:</label>
+							<div class="value"><span></span></div>
+						</div>											
+					</div>
+						<div>
+							<input type="hidden" id="value-entered" />
+							<input type="hidden" id="item-to-update" />
+							<ul class="keypad">
+								<li data-keypad-num="1"><a><span>1</span></a></li>
+								<li data-keypad-num="2"><a><span>2</span></a></li>
+								<li data-keypad-num="3"><a><span>3</span></a></li>
+								<li data-keypad-num="4"><a><span>4</span></a></li>
+								<li data-keypad-num="5"><a><span>5</span></a></li>
+								<li data-keypad-num="6"><a><span>6</span></a></li>
+								<li data-keypad-num="7"><a><span>7</span></a></li>
+								<li data-keypad-num="8"><a><span>8</span></a></li>
+								<li data-keypad-num="9"><a><span>9</span></a></li>
+								<li data-keypad-num="."><a><span>.</span></a></li>
+								<li data-keypad-num="0"><a><span>0</span></a></li>
+								<li data-keypad-num=""><a class="backspace"><span></span></a></li>
+							</ul>
+						</div>
+				</div>
+
+
+			<div class="content has-phases">	
+				<div class="current-settings serial-number">
+					<div class="label"><span>Serial Number</span></div>
+					<div class="values has-popup">
+						<div data-category="serialnum"></div>
+					</div>
+				</div>	
+				<div class="current-settings intersection-name-setting">
+					<div class="label"><span>Intersection Name</span></div>
+					<div class="values has-popup">
+						<div data-category="intersectionName"></div>
+					</div>
+				</div>					
+				<div class="current-settings host-name">
+					<div class="label"><span>Host Name</span></div>
+					<div class="values has-popup">
+						<div data-category="host-name"></div>
+					</div>
+				</div>																									
+			</div>
+			<div class="bottom-strip">
+				<div data-panel="home" id="go-straight-home" class="go-straight-home">home</div>			
+			</div>
+		</div>
+
+<!-- ************************************************************** -->
+<!--
+		<div class="panel util-phase-call">
+			<div class="configuration-name-frame"></div>
+			<a href="#" class="go-straight-home"></a>
+			<div class="access-lock"><a href="#"></a></div>
+			<div class="help"><a href="#"></a></div>
+			<a class="save"></a>
+			<div class="title"><span>Phase Calls</span></div>
+
+
+
+
+			<div class="content has-phases">
+		
+
+				<div class="current-settings vehicle phase">
+					<div class="label"><span>Vehicle Phase</span></div>
+					<div class="values">
+						<ul>
+							<li class="has-phase has-popup"><div><span>1</span></div></li>
+							<li class="has-phase has-popup"><div><span>2</span></div></li>
+							<li class="has-phase has-popup"><div><span>3</span></div></li>
+							<li class="has-phase has-popup"><div><span>4</span></div></li>
+							<li class="has-phase has-popup"><div><span>5</span></div></li>
+							<li class="has-phase has-popup"><div><span>6</span></div></li>
+							<li class="has-phase has-popup"><div><span>7</span></div></li>
+							<li class="has-phase has-popup"><div><span>8</span></div></li>
+							<li class="has-phase has-popup"><div><span>9</span></div></li>
+							<li class="has-phase has-popup"><div><span>10</span></div></li>
+							<li class="has-phase has-popup"><div><span>11</span></div></li>
+							<li class="has-phase has-popup"><div><span>12</span></div></li>
+							<li class="has-phase has-popup"><div><span>13</span></div></li>
+							<li class="has-phase has-popup"><div><span>14</span></div></li>
+							<li class="has-phase has-popup"><div><span>15</span></div></li>
+							<li class="has-phase has-popup"><div><span>16</span></div></li>
+						</ul>
+					</div>
+				</div>
+				<div class="current-settings vehicle vehicle-enabled">
+					<div class="label"><div class="help-marker"></div><span>Enabled</span></div>
+					<div class="values">
+						<ul>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="current-settings phase">
+					<div class="label"><span>Pedestrian Phase</span></div>
+					<div class="values">
+						<ul>
+							<li><div><span></span></div></li>
+							<li><div><span></span></div></li>
+							<li><div><span></span></div></li>
+							<li><div><span></span></div></li>
+							<li><div><span></span></div></li>
+							<li><div><span></span></div></li>
+							<li><div><span></span></div></li>
+							<li><div><span></span></div></li>
+							<li><div><span></span></div></li>
+							<li><div><span></span></div></li>
+							<li><div><span></span></div></li>
+							<li><div><span></span></div></li>
+							<li><div><span></span></div></li>
+							<li><div><span></span></div></li>
+							<li><div><span></span></div></li>
+							<li><div><span></span></div></li>
+
+						</ul>
+					</div>
+				</div>
+
+
+				<div class="current-settings ped ped-enabled">
+					<div class="label"><div class="help-marker"></div><span>Enabled</span></div>
+					<div class="values">
+						<ul>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+							<li class="switch"><span></span></li>
+						</ul>
+					</div>
+				</div>
+																				
+			</div>
+			<div class="bottom-strip">
+				<div data-panel="config-detail-home" class="go-back"></div>
+				<div class="page-left disabled"></div>
+				<div class="page-right disabled"></div>
+
+			</div>
+		</div>
+-->
+<!-- ************************************************************** -->
+
+		<div id="manual-override-view" class="panel man-ovr">
+			<div class="configuration-name-frame"></div>
+			<a href="#" id="go-straight-back" class="go-straight-back" data-panel="home"></a>
+			<div class="set"></div>
+			
+			<div class="title"><span>Manual Override</span></div>
+
+			<div class="content">
+				<ul>
+					<li class="override-free-mode no-more">
+						<a href="#"><span class="switch"></span><span class="label">Free Mode</span></a>
+					</li>
+					<li class="override-cabinet-flash no-more">
+						<a href="#"><span class="switch"></span><span class="label">Cabinet Flash</span></span></a>		
+					</li>	
+					<li class="override-stop-time no-more">
+						<a href="#"><span class="switch"></span><span class="label">Stop Time</span><span class="current-stop"></span></a>		
+					</li>	
+					<li class="override-vehicle-phase">
+						<a href="#"><span>Vehicle Phase</span><span class="errors-found"></span><span class="count"></span></a>		
+					</li>		
+					<li class="override-ped-phase">
+						<a href="#"><span>Pedestrian Phase</span><span class="count"></span></a>		
+					</li>	
+					<li class="override-vehicle-detect">
+						<a href="#"><span>Vehicle Detector</span><span class="count"></span></a>		
+					</li>		
+					<li class="override-ped-detect">
+						<a href="#"><span>Pedestrian Detector</span><span class="count"></span></a>		
+					</li>	
+					<li class="override-config-name">
+						<a><span class="label">Configuration Name</span><span class="current-config"></span></a>
+					</li>																						
+					<li class="manual-override-reload no-more">
+						<a><span class="label">Reload Previous Saved Settings</span></a>
+					</li>		
+					<li class="manual-override-reset no-more">
+						<a><span class="label">Turn Off Manual Override</span></a>
+					</li>		
+				</ul>
+													
+			</div>
+			<div class="bottom-strip">
+				<div data-panel="home" id="go-straight-home" class="go-straight-home"></div>
+				<div class="page-up"></div>
+				<div class="page-down"></div>	
+			</div>
+		</div>
+
+<!-- ************************************************************** -->
+
+		<div id="manual-override-ped-phase" class="panel man-ovr">
+			<div class="configuration-name-frame"></div>
+			<a href="#" id="go-straight-back" class="go-straight-back" data-panel="manual-override-view"></a>
+			<div class="set"></div>
+			
+			<div class="title"><span>Manual Override Ped Phase</span></div>
+
+			<div class="content has-phases">
+				<div class="current-settings override ped phase">
+					<div class="label"><span>Ped Phase</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>						
+				<div class="current-settings ped phase-calls">
+					<div class="label"><div class="switch"></div><span>Phase Calls</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>		
+				<div class="current-settings ped exclusive-calls">
+					<div class="label"><div class="switch"></div><span>Exclusive Calls</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>
+				<div class="current-settings ped recalls">
+					<div class="label"><div class="switch"></div><span>Recalls</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>																																				
+			</div>
+			<div class="bottom-strip">
+
+			</div>
+		</div>
+
+<!-- ************************************************************** -->
+
+		<div id="manual-override-vehicle-phase" class="panel man-ovr">
+			<div class="configuration-name-frame"></div>
+			<a href="#" id="go-straight-back" class="go-straight-back" data-panel="manual-override-view"></a>
+			<div class="set"></div>
+			
+			<div class="title"><span>Manual Override Vehicle Phase</span></div>
+
+			<div class="overlay vehicle-recalls-selection">
+ 					<div class="cancel"></div>
+					<div class="options-radio">
+						<ul>
+							<li data-recall-selection="0"><span>None</span></li>
+							<li data-recall-selection="1"><span>Min</span></li>
+							<li data-recall-selection="2"><span>Max</span></li>
+							<li data-recall-selection="3"><span>Soft</span></li>
+						</ul>
+					</div>
+					<input id="current-phase" type="hidden" value="0"/>
+					<input id="current-value" type="hidden" value="false"/>
+					<input id="selected-value" type="hidden" value="false"/>
+			</div>
+
+			<div class="content has-phases">
+				<div class="current-settings override vehicle phase">
+					<div class="label"><span>Vehicle Phase</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>						
+				<div class="current-settings vehicle phase-calls">
+					<div class="label"><div class="switch"></div><span>Phase Calls</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>		
+				<div class="current-settings vehicle exclusive-calls">
+					<div class="label"><div class="switch"></div><span>Exclusive Calls</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>
+				<div class="current-settings vehicle recalls">
+					<div class="label"><div class="cycler none" data-recall-selection='0'><span></span></div><span>Recalls</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>																																				
+			</div>
+			<div class="bottom-strip">
+
+			</div>
+		</div>
+<!-- ************************************************************** -->
+
+		<div id="manual-override-vehicle-detect" class="panel man-ovr">
+			<div class="configuration-name-frame"></div>
+			<a href="#" id="go-straight-back" class="go-straight-back" data-panel="manual-override-view"></a>
+			<div class="set"></div>
+			
+			<div class="title"><span>Manual Override Vehicle Detector</span></div>
+				<div class="content has-phases">
+				<div class="current-settings override vehicle detector phase">
+					<div class="label"><span>Vehicle Detector</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>																												
+				<div class="current-settings vehicle vehicle-detectors detector">
+					<div class="label"><div class="switch"></div><span>Trigger</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>																																	
+				</div>
+			<div class="bottom-strip">
+
+			</div>
+		</div>
+
+<!-- ************************************************************** -->
+
+		<div id="manual-override-ped-detect" class="panel man-ovr">
+			<div class="configuration-name-frame"></div>
+			<a href="#" id="go-straight-back" class="go-straight-back" data-panel="manual-override-view"></a>
+			<div class="set"></div>
+			
+			<div class="title"><span>Manual Override Ped Detector</span></div>
+				<div class="content has-phases">
+					<div class="current-settings ped detector phase">
+						<div class="label"><span>Ped Detector</span></div>
+						<div class="values">
+							<ul></ul>
+						</div>
+					</div>																												
+					<div class="current-settings ped ped-detectors detector">
+						<div class="label"><div class="switch"></div><span>Trigger</span></div>
+						<div class="values">
+							<ul></ul>
+						</div>
+					</div>																																			
+				</div>
+			<div class="bottom-strip">
+				<div class="page-left disabled"></div>
+				<div class="page-right"></div>			
+			</div>
+		</div>
+
+<!-- ************************************************************** -->
+
+
+		<div id="manual-override-config-name" class="panel man-ovr">
+			<div class="configuration-name-frame"></div>
+			<a href="#" id="go-straight-back" class="go-straight-back" data-panel="manual-override-view"></a>
+			<div class="set"></div>
+			
+			<div class="title"><span>Manual Override Config Selection</span></div>
+				<div class="content">
+					<div class="config-selection">
+
+								<ul>
+
+								</ul>
+
+							<input id="current-value" type="hidden" value="false"/>
+							<input id="selected-value" type="hidden" value="false"/>
+					</div>																									
+				</div>
+			<div class="bottom-strip">
+				<div data-panel="home" id="go-straight-home" class="go-straight-home">home</div>
+			</div>
+		</div>
+
+<!-- ************************************************************** -->
+
+
+		<div id="preempt-setup" class="panel preempt-setup">
+			<div class="names">
+				<div class="intersection-name-frame"><span></span></div>
+				<div class="preempt-name-frame"><span>PREEMPT NAME</span></div>
+			</div>	
+			<a href="#" id="go-straight-back" class="go-straight-back" data-panel="preempt-detail-home"></a>
+			<div class="access-lock"><a href="#"></a></div>
+			<a class="save"></a>
+			<div class="title"><span>Preempt Setup</span></div>
+
+			<div class="overlay timing">
+				<div class="blurry-bg"></div>
+				<div class="cancel"></div>
+				<div class="set"></div>
+				<div class="current-info">
+					<div class="has-phase">
+						<label>Preempt:</label>
+						<div></div>
+					</div>
+					<div class="current-timing-entry">
+						<label>Current ??):</label>
+						<div class="value"><span>1</span></div>
+					</div>
+					<div class="new-timing">
+						<label>New ??:</label>
+						<div class="value"><span></span></div>
+					</div>											
+				</div>
+					<div>
+						<input type="hidden" id="value-entered" />
+						<input type="hidden" id="item-to-update" />
+						<ul class="keypad">
+							<li data-keypad-num="1"><a><span>1</span></a></li>
+							<li data-keypad-num="2"><a><span>2</span></a></li>
+							<li data-keypad-num="3"><a><span>3</span></a></li>
+							<li data-keypad-num="4"><a><span>4</span></a></li>
+							<li data-keypad-num="5"><a><span>5</span></a></li>
+							<li data-keypad-num="6"><a><span>6</span></a></li>
+							<li data-keypad-num="7"><a><span>7</span></a></li>
+							<li data-keypad-num="8"><a><span>8</span></a></li>
+							<li data-keypad-num="9"><a><span>9</span></a></li>
+							<li></li>
+							<li data-keypad-num="0"><a><span>0</span></a></li>
+							<li data-keypad-num=""><a class="backspace"><span></span></a></li>
+						</ul>
+					</div>
+			</div>
+
+
+			<div class="overlay single-state-definition">
+				<div class="blurry-bg"></div>
+				<div class="cancel"></div>
+				<div class="set"></div>
+				<div class="current-info">
+					<div class="has-phase">
+						<label>Preempt:</label>
+						<div></div>
+					</div>
+					<div class="current-state">
+						<label>Current State:</label>
+						<div class="state"></div>
+					</div>
+					<div class="new-state">
+						<label>New ??:</label>
+						<div class="phase phase-1">
+							<span>0</span>
+							<div class="up"></div>
+							<div class="down"></div>
+						</div>
+						<div class="phase phase-2">
+							<span>0</span>
+							<div class="up"></div>
+							<div class="down"></div>
+						</div>						
+					</div>											
+				</div>
+					<div>
+						<input type="hidden" id="phase-1-entered" value="0"/>
+						<input type="hidden" id="phase-2-entered" value="0" />
+						<input type="hidden" id="item-to-update" />
+						<input type="hidden" id="item-index"/>
+					</div>
+			</div>
+
+
+			<div class="content has-phases">
+		
+
+				<div class="current-settings vehicle phase preempt-id">
+					<div class="label"><span>Preempt</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>
+				<div class="current-settings preempt-enabled">
+					<div class="label"><span>Enabled</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>
+				<div class="current-settings preempt-type">
+					<div class="label has-cycler"><span>Type</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>				
+				<div class="current-settings preempt-input-num keypad">
+					<div class="label"><div class="help-marker"></div><span>Preempt Input</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>	
+				<div class="current-settings preempt-max-call keypad">
+					<div class="label"><div class="help-marker"></div><span>Max Call</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>				
+				<div class="current-settings preempt-dwell single-state">
+					<div class="label"><span>Dwell</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>	
+				<div class="current-settings preempt-cycle single-state">
+					<div class="label"><span>Cycle</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>	
+				<div class="current-settings preempt-exit single-state">
+					<div class="label"><span>Exit</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>	
+				<div class="current-settings one-call-vehicle">
+					<div class="label"><span>One Call Vehicle on Exit</span></div>
+					<div class="values">
+						<ul>
+						</ul>
+					</div>
+				</div>		
+				<div class="current-settings one-call-ped">
+					<div class="label"><span>One Call Ped on Exit</span></div>
+					<div class="values">
+						<ul>
+						</ul>
+					</div>
+				</div>	
+				<div class="current-settings keypad min-green-enter">
+					<div class="label"><span>Min Green To Enter Preempt</span></div>
+					<div class="values">
+						<ul>
+						</ul>
+					</div>
+				</div>	
+				<div class="current-settings keypad delay">
+					<div class="label"><span>Delay</span></div>
+					<div class="values">
+						<ul>
+						</ul>
+					</div>
+				</div>																													
+			</div>
+			<div class="bottom-strip">
+				<div data-panel="home" id="go-straight-home" class="go-straight-home">home</div>
+				<div class="page-down"><span></span></div>
+				<div class="page-up"><span></span></div>
+			</div>
+		</div>
+
+<!-- ************************************************************** -->
+
+		<div id="preempt-phase-startup" class="panel preempt preempt-phase-startup">
+			<div class="names">
+				<div class="intersection-name-frame"><span></span></div>
+				<div class="preempt-name-frame"><span>PREEMPT NAME</span></div>
+			</div>	
+			<a href="#" id="go-straight-back" class="go-straight-back" data-panel="preempt-detail-home"></a>
+			<div class="access-lock"><a href="#"></a></div>
+			<div class="help"><a href="#"></a></div>
+			<a class="save"></a>
+			<div class="title"><span>Preempt Phase Startup</span></div>
+
+			<div class="content has-phases">
+		
+
+				<div class="current-settings vehicle phase">
+					<div class="label"><span>Vehicle Phase</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>
+				<div class="current-settings vehicle vehicle-enabled">
+					<div class="label"><div class="help-marker"></div><span>Enabled</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>
+
+				<div class="current-settings vehicle vehicle-channel">
+					<div class="label"><div class="help-marker"></div><span>Channel</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>
+
+
+				<div class="current-settings ped phase">
+					<div class="label"><span>Pedestrian Phase</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>
+
+
+				<div class="current-settings ped ped-enabled">
+					<div class="label"><div class="help-marker"></div><span>Enabled</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>
+		
+				<div class="current-settings ped ped-channel">
+					<div class="label"><div class="help-marker"></div><span>Channel</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>				
+
+
+																				
+			</div>
+			<div class="bottom-strip">
+				<div data-panel="home" id="go-straight-home" class="go-straight-home">home</div>
+				<!--<div class="page-left disabled"></div>
+				<div class="page-right disabled"></div>
+				-->
+			</div>
+		</div>
+
+
+
+<!-- ************************************************************** -->
+
+<!-- 		<div id="preempt-phase-timing" class="panel preempt preempt-phase-timing">
+			<div class="names">
+				<div class="intersection-name-frame"><span></span></div>
+				<div class="preempt-name-frame"><span>PREEMPT NAME</span></div>
+			</div>	
+			<a href="#" id="go-straight-back" class="go-straight-back" data-panel="home"></a>
+			<div class="access-lock"><a href="#"></a></div>
+			<a class="save"></a>
+			<div class="title"><span>Vehicle Phases</span></div>
+
+
+			<div class="overlay timing">
+				<div class="blurry-bg"></div>
+				<div class="cancel"></div>
+				<div class="save"></div>
+				<div class="current-info">
+					<div class="has-phase">
+						<label>Phase:</label>
+						<div></div>
+					</div>
+					<div class="current-timing-entry">
+						<label>Current ??):</label>
+						<div class="value"><span>1</span></div>
+					</div>
+					<div class="new-timing">
+						<label>New ??:</label>
+						<div class="value"><span></span></div>
+					</div>											
+				</div>
+					<div>
+						<input type="hidden" id="value-entered" />
+						<input type="hidden" id="item-to-update" />
+						<ul class="keypad">
+							<li data-keypad-num="1"><a><span>1</span></a></li>
+							<li data-keypad-num="2"><a><span>2</span></a></li>
+							<li data-keypad-num="3"><a><span>3</span></a></li>
+							<li data-keypad-num="4"><a><span>4</span></a></li>
+							<li data-keypad-num="5"><a><span>5</span></a></li>
+							<li data-keypad-num="6"><a><span>6</span></a></li>
+							<li data-keypad-num="7"><a><span>7</span></a></li>
+							<li data-keypad-num="8"><a><span>8</span></a></li>
+							<li data-keypad-num="9"><a><span>9</span></a></li>
+							<li data-keypad-num="."><a><span>.</span></a></li>
+							<li data-keypad-num="0"><a><span>0</span></a></li>
+							<li data-keypad-num=""><a class="backspace"><span></span></a></li>
+						</ul>
+					</div>
+			</div>
+
+
+			<div class="content has-phases">
+				<div class="current-settings phase">
+					<div class="label"><span>Phase</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>
+				<div class="current-settings recall">
+					<div class="label"><span>Recall</span></div>
+					<div class="values">
+						<ul>
+						</ul>
+					</div>
+				</div>					
+				<div class="current-settings keypad min-green-timing">
+					<div class="label"><span>Min Green Timing</span></div>
+					<div class="values">
+						<ul>
+						</ul>
+					</div>
+				</div>
+				<div class="current-settings keypad max-green-timing">
+					<div class="label"><span>Max Green Timing</span></div>
+					<div class="values">
+						<ul>
+						</ul>
+					</div>
+				</div>				
+				<div class="current-settings keypad yellow-timing">
+					<div class="label"><span>Yellow Timing</span></div>
+					<div class="values">
+						<ul>
+						</ul>
+					</div>
+				</div>				
+				<div class="current-settings keypad red-timing">
+					<div class="label"><span>Red Timing</span></div>
+					<div class="values">
+						<ul>
+						</ul>
+					</div>
+				</div>			
+				<div class="current-settings keypad passage-time">
+					<div class="label"><span>Passage Time</span></div>
+					<div class="values">
+						<ul>
+						</ul>
+					</div>
+				</div>
+				<div class="current-settings keypad one-call">
+					<div class="label"><span>One Call on Exit</span></div>
+					<div class="values">
+						<ul>
+						</ul>
+					</div>
+				</div>																											
+			</div>
+			<div class="bottom-strip">
+				<div data-panel="home" id="go-straight-home" class="go-straight-home">home</div>
+			</div>
+		</div> -->
+
+<!-- ************************************************************** -->
+
+		<div id="preempt-left" class="panel preempt preempt-left">
+			<div class="names">
+				<div class="intersection-name-frame"><span></span></div>
+				<div class="preempt-name-frame"><span>PREEMPT NAME</span></div>
+			</div>	
+			<a href="#" id="go-straight-back" class="go-straight-back" data-panel="preempt-detail-home"></a>
+			<div class="access-lock"><a href="#"></a></div>
+			<a class="save"></a>
+			<div class="title"><span>Left Turn Permissive</span></div>
+
+			<div class="overlay timing">
+				<div class="blurry-bg"></div>
+				<div class="cancel"></div>
+				<div class="save"></div>
+				<div class="current-info">
+					<div class="has-phase">
+						<label>Phase:</label>
+						<div></div>
+					</div>
+					<div class="current-timing-entry">
+						<label>Current ??):</label>
+						<div class="value"><span>1</span></div>
+					</div>
+					<div class="new-timing">
+						<label>New ??:</label>
+						<div class="value"><span></span></div>
+					</div>											
+				</div>
+					<div>
+						<input type="hidden" id="value-entered" />
+						<input type="hidden" id="item-to-update" />
+						<ul class="keypad">
+							<li data-keypad-num="1"><a><span>1</span></a></li>
+							<li data-keypad-num="2"><a><span>2</span></a></li>
+							<li data-keypad-num="3"><a><span>3</span></a></li>
+							<li data-keypad-num="4"><a><span>4</span></a></li>
+							<li data-keypad-num="5"><a><span>5</span></a></li>
+							<li data-keypad-num="6"><a><span>6</span></a></li>
+							<li data-keypad-num="7"><a><span>7</span></a></li>
+							<li data-keypad-num="8"><a><span>8</span></a></li>
+							<li data-keypad-num="9"><a><span>9</span></a></li>
+							<li data-keypad-num="."><a><span>.</span></a></li>
+							<li data-keypad-num="0"><a><span>0</span></a></li>
+							<li data-keypad-num=""><a class="backspace"><span></span></a></li>
+						</ul>
+					</div>
+			</div>
+
+			<div class="content has-phases">
+
+				<div class="current-settings vehicle phase">
+					<div class="label"><span>Phase</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>
+				<div class="current-settings keypad permissive-start">
+					<div class="label"><span>Permissive Start Phase</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>		
+				<div class="current-settings keypad flashing-output">
+					<div class="label"><span>Flashing Output</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>	
+				<div class="current-settings left-turn-mode">
+					<div class="label has-cycler"><span>Left Turn Mode</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>	
+				<div class="current-settings opposing-thru-phase">
+					<div class="label"><span>Opposing Thru Phase</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>																									
+			</div>
+			<div class="bottom-strip">
+				<div data-panel="home" id="go-straight-home" class="go-straight-home">home</div>
+			<!--
+				<div class="page-left disabled"></div>
+				<div class="page-right"></div>
+			-->
+			</div>
+		</div>
+
+
+<!-- ************************************************************** -->
+
+			<div id="preempt-ped-detectors" class="panel preempt-ped-detectors">
+			<div class="names">
+				<div class="intersection-name-frame"><span></span></div>
+				<div class="preempt-name-frame"><span>PREEMPT NAME</span></div>
+			</div>	
+				<a href="#" id="go-straight-back" class="go-straight-back" data-panel="preempt-detail-home"></a>
+				<div class="access-lock"><a href="#"></a></div>
+				<a class="save"></a>
+				<div class="title"><span>Pedestrian Detectors</span></div>
+
+				<div class="content has-phases">
+					<div class="current-settings detectors phase">
+						<div class="label"><span>Detector</span></div>
+						<div class="values">
+							<ul>
+							</ul>
+						</div>
+					</div>																															
+					<div class="current-settings phase-assignment">
+						<div class="label"><span>Phase Assignment</span></div>
+						<div class="values">
+							<ul>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="bottom-strip">
+					<div data-panel="home" id="go-straight-home" class="go-straight-home">home</div>
+					<div class="page-left disabled"></div>
+					<div class="page-right"></div>
+
+				</div>
+			</div>
+
+
+<!-- ************************************************************** -->
+
+		<div id="preempt-ped-phase-def" class="panel preempt preempt-ped-phase-def">
+			<div class="names">
+				<div class="intersection-name-frame"><span></span></div>
+				<div class="preempt-name-frame"><span>PREEMPT NAME</span></div>
+			</div>	
+			<a href="#" id="go-straight-back" class="go-straight-back" data-panel="preempt-detail-home"></a>
+			<div class="access-lock"><a href="#"></a></div>
+			<a class="save"></a>
+			<div class="title"><span>Pedestrian Definitions</span></div>
+
+			<div class="overlay timing">
+				<div class="blurry-bg"></div>
+				<div class="cancel"></div>
+				<div class="save"></div>
+				<div class="current-info">
+					<div class="has-phase">
+						<label>Phase:</label>
+						<div></div>
+					</div>
+					<div class="current-timing-entry">
+						<label>Current ??):</label>
+						<div class="value"><span>1</span></div>
+					</div>
+					<div class="new-timing">
+						<label>New ??:</label>
+						<div class="value"><span></span></div>
+					</div>											
+				</div>
+					<div>
+						<input type="hidden" id="value-entered" />
+						<input type="hidden" id="item-to-update" />
+						<ul class="keypad">
+							<li data-keypad-num="1"><a><span>1</span></a></li>
+							<li data-keypad-num="2"><a><span>2</span></a></li>
+							<li data-keypad-num="3"><a><span>3</span></a></li>
+							<li data-keypad-num="4"><a><span>4</span></a></li>
+							<li data-keypad-num="5"><a><span>5</span></a></li>
+							<li data-keypad-num="6"><a><span>6</span></a></li>
+							<li data-keypad-num="7"><a><span>7</span></a></li>
+							<li data-keypad-num="8"><a><span>8</span></a></li>
+							<li data-keypad-num="9"><a><span>9</span></a></li>
+							<li data-keypad-num="."><a><span>.</span></a></li>
+							<li data-keypad-num="0"><a><span>0</span></a></li>
+							<li data-keypad-num=""><a class="backspace"><span></span></a></li>
+						</ul>
+					</div>
+			</div>
+
+
+			<div class="content has-phases">
+
+				<div class="current-settings ped phase">
+					<div class="label"><span>Phase</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>
+				<div class="current-settings keypad walk-timing">
+					<div class="label"><span>Ped Walk Timing</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>
+				<div class="current-settings keypad clear-timing">
+					<div class="label"><span>Ped Clear Timing</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>				
+				<div class="current-settings non-actuated">
+					<div class="label"><span>Non-Actuated</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>
+				<div class="current-settings rest-in-walk">
+					<div class="label"><span>Rest-In-Walk</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>
+				<div class="current-settings clear-yellow">
+					<div class="label"><span>Ped Clear Times with Yellow</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>																															
+			</div>
+			<div class="bottom-strip">
+				<div data-panel="home" id="go-straight-home" class="go-straight-home">home</div>
+				
+				<div class="page-left disabled"></div>
+				<div class="page-right"></div>
+				
+			</div>
+		</div>
+
+<!-- ************************************************************** -->
+
+		<div id="preempt-vehicle-phase-timing" class="panel preempt preempt-vehicle-phase-timing">
+			<div class="names">
+				<div class="intersection-name-frame"><span></span></div>
+				<div class="preempt-name-frame"><span>PREEMPT NAME</span></div>
+			</div>	
+			<a href="#" id="go-straight-back" class="go-straight-back" data-panel="preempt-detail-home"></a>
+			<div class="access-lock"><a href="#"></a></div>
+			<a class="save"></a>
+			<div class="title"><span>Phase Timing / Recall</span></div>
+<!--
+
+			<div class="overlay timing">
+				<div class="blurry-bg"></div>
+				<div class="cancel"></div>
+				<div class="save"></div>
+				<div class="current-info">
+					<div class="has-phase">
+						<label>Phase:</label>
+						<div></div>
+					</div>
+					<div class="current-timing-entry">
+						<label>Current ??):</label>
+						<div class="value"><span>1</span></div>
+					</div>
+					<div class="new-timing">
+						<label>New ??:</label>
+						<div class="value"><span></span></div>
+					</div>											
+				</div>
+					<div>
+						<input type="hidden" id="value-entered" />
+						<input type="hidden" id="item-to-update" />
+						<ul class="keypad">
+							<li data-keypad-num="1"><a><span>1</span></a></li>
+							<li data-keypad-num="2"><a><span>2</span></a></li>
+							<li data-keypad-num="3"><a><span>3</span></a></li>
+							<li data-keypad-num="4"><a><span>4</span></a></li>
+							<li data-keypad-num="5"><a><span>5</span></a></li>
+							<li data-keypad-num="6"><a><span>6</span></a></li>
+							<li data-keypad-num="7"><a><span>7</span></a></li>
+							<li data-keypad-num="8"><a><span>8</span></a></li>
+							<li data-keypad-num="9"><a><span>9</span></a></li>
+							<li data-keypad-num="."><a><span>.</span></a></li>
+							<li data-keypad-num="0"><a><span>0</span></a></li>
+							<li data-keypad-num=""><a class="backspace"><span></span></a></li>
+						</ul>
+					</div>
+			</div>
+-->
+
+			<div class="content has-phases">
+				<div class="current-settings vehicle phase">
+					<div class="label"><span>Phase</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>
+				<div class="current-settings recall">
+					<div class="label"><span>Recall</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>					
+				<div class="current-settings keypad min-green-timing">
+					<div class="label"><span>Min Green Timing</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>
+				<div class="current-settings keypad max-green-timing">
+					<div class="label"><span>Max Green Timing</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>				
+				<div class="current-settings keypad yellow-timing">
+					<div class="label"><span>Yellow Timing</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>				
+				<div class="current-settings keypad red-timing">
+					<div class="label"><span>Red Timing</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>			
+				<div class="current-settings keypad passage-time">
+					<div class="label"><span>Passage Time</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>																									
+			</div>
+			<div class="bottom-strip">
+				<div data-panel="home" id="go-straight-home" class="go-straight-home">home</div>
+				<div class="page-left disabled"></div>
+					<div class="page-right"></div>
+
+			</div>
+		</div>
+
+<!-- ************************************************************** -->
+
+
+			<div id="preempt-vehicle-detectors" class="panel preempt preempt-vehicle-detectors">
+				<div class="names">
+					<div class="intersection-name-frame"><span></span></div>
+					<div class="preempt-name-frame"><span>PREEMPT NAME</span></div>
+				</div>	
+				<a href="#" id="go-straight-back" class="go-straight-back" data-panel="preempt-detail-home"></a>
+				<div class="access-lock"><a href="#"></a></div>
+				<a class="save"></a>
+				<div class="title"><span>Vehicle Detectors</span></div>
+
+				<div class="content has-phases">
+					<div class="current-settings detectors phase">
+						<div class="label"><span>Detector</span></div>
+						<div class="values">
+							<ul>
+
+
+							</ul>
+						</div>
+					</div>
+					<div class="current-settings lock-detection">
+						<div class="label"><span>Lock Detection</span></div>
+						<div class="values">
+							<ul>
+
+							</ul>
+						</div>
+					</div>		
+					<div class="current-settings delay">
+						<div class="label"><span>Delay</span></div>
+						<div class="values">
+							<ul>
+							</ul>
+						</div>
+					</div>		
+					<div class="current-settings extend">
+						<div class="label"><span>Extend</span></div>
+						<div class="values">
+							<ul>
+							</ul>
+						</div>
+					</div>
+					<div class="current-settings stuck-off">
+						<div class="label"><span>Stuck OFF: Elapsed Time</span></div>
+						<div class="values">
+							<ul>
+
+							</ul>
+						</div>
+					</div>
+					<div class="current-settings stuck-on">
+						<div class="label"><span>Stuck ON: Elapsed Time</span></div>
+						<div class="values">
+							<ul>
+
+							</ul>
+						</div>
+					</div>
+					<div class="current-settings enable-call">
+						<div class="label"><span>Enable Call on Failure</span></div>
+						<div class="values">
+							<ul>
+							</ul>
+						</div>
+					</div>																																
+					<div class="current-settings phase-assignment">
+						<div class="label"><span>Phase Assignment</span></div>
+						<div class="values">
+							<ul>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="bottom-strip">
+					<div data-panel="home" id="go-straight-home" class="go-straight-home">home</div>
+				<!--
+					<div class="page-left disabled"></div>
+					<div class="page-right"></div>
+				-->
+				</div>
+			</div>		
+
+<!-- ************************************************************** -->
+
+		<div id="config-timed-overlap" class="panel config config-timed-overlap">
+			<div class="configuration-name-frame"><span></span></div>
+			<a href="#" id="go-straight-back" class="go-straight-back" data-panel="config-detail-home"></a>
+			<a class="save"></a>
+			<div class="title"><span>Overlap</span></div>
+
+			<div class="overlay timing">
+				<div class="cancel"></div>
+				<div class="set"></div>
+				<div class="current-info">
+					<div class="has-phase">
+						<label>Phase:</label>
+						<div></div>
+					</div>
+					<div class="current-timing-entry">
+						<label>Current ??):</label>
+						<div class="value"><span>1</span></div>
+					</div>
+					<div class="new-timing">
+						<label>New ??:</label>
+						<div class="value"><span></span></div>
+					</div>											
+				</div>
+					<div>
+						<input type="hidden" id="value-entered" />
+						<input type="hidden" id="item-to-update" />
+						<ul class="keypad">
+							<li data-keypad-num="1"><a><span>1</span></a></li>
+							<li data-keypad-num="2"><a><span>2</span></a></li>
+							<li data-keypad-num="3"><a><span>3</span></a></li>
+							<li data-keypad-num="4"><a><span>4</span></a></li>
+							<li data-keypad-num="5"><a><span>5</span></a></li>
+							<li data-keypad-num="6"><a><span>6</span></a></li>
+							<li data-keypad-num="7"><a><span>7</span></a></li>
+							<li data-keypad-num="8"><a><span>8</span></a></li>
+							<li data-keypad-num="9"><a><span>9</span></a></li>
+							<li data-keypad-num="."><a><span>.</span></a></li>
+							<li data-keypad-num="0"><a><span>0</span></a></li>
+							<li data-keypad-num=""><a class="backspace"><span></span></a></li>
+						</ul>
+					</div>
+			</div>
+
+			<div class="content has-phases">
+		
+
+				<div class="current-settings vehicle overlap phase">
+					<div class="label"><span>Vehicle Phase</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>
+				<div class="current-settings type">
+					<div class="label"><div class="help-marker"></div><span>Type</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>							
+				<div class="current-settings keypad channel">
+					<div class="label"><div class="help-marker"></div><span>Channel</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>
+				<div class="current-settings keypad min-green-timing">
+					<div class="label"><div class="help-marker"></div><span>Min Green Timing</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>
+				<div class="current-settings keypad extend-green">
+					<div class="label"><div class="help-marker"></div><span>Extend Green</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>
+				<div class="current-settings keypad yellow-timing">
+					<div class="label"><div class="help-marker"></div><span>Yellow Timing</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>		
+				<div class="current-settings keypad red-timing">
+					<div class="label"><div class="help-marker"></div><span>Red Timing</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>	
+				<div class="current-settings states">
+					<div class="label"><div class="help-marker"></div><span>States?</span></div>
+					<div class="values">
+						<ul></ul>
+					</div>
+				</div>	
+
+				<!--
+				<div class="current-settings state">
+					<div class="label"><div class="help-marker"></div><span>Dwell State</span></div>
+					<div class="values">
+						<ul>
+							<li class="state-sl-nl"><div class="dir-sl"><span class="phase-num">8</span></div><div class="dir-nl"><span class="phase-num">8</span></div></li>
+							<li class="state-nl-nt"><div class="dir-nl"><span class="phase-num">8</span></div><div class="dir-nt"><span class="phase-num">8</span></div></li>
+							<li class="state-st-nt"><div class="dir-st"><span class="phase-num">8</span></div><div class="dir-nt"><span class="phase-num">8</span></div></li>
+							<li class="state-st-sl"><div class="dir-st"><span class="phase-num">8</span></div><div class="dir-sl"><span class="phase-num">8</span></div></li>
+							<li class="state-el-wl"><div class="dir-el"><span class="phase-num">8</span></div><div class="dir-wl"><span class="phase-num">8</span></div></li>
+							<li class="state-el-et"><div class="dir-el"><span class="phase-num">8</span></div><div class="dir-et"><span class="phase-num">8</span></div></li>
+							<li class="state-et-wt"><div class="dir-et"><span class="phase-num">8</span></div><div class="dir-wt"><span class="phase-num">8</span></div></li>
+							<li class="state-wt-wl"><div class="dir-wt"><span class="phase-num">8</span></div><div class="dir-wl"><span class="phase-num">8</span></div></li>
+							<li class="state-sl"><div class="dir-sl"><span>8</span></div></li>
+							<li class="state-st"><div class="dir-st"><span>8</span></div></li>
+							<li class="state-nl"><div class="dir-nl"><span>8</span></div></li>
+							<li class="state-nt"><div class="dir-nt"><span>8</span></div></li>
+							<li class="state-el"><div class="dir-el"><span>8</span></div></li>
+							<li class="state-et"><div class="dir-et"><span>8</span></div></li>
+							<li class="state-wl"><div class="dir-wl"><span>8</span></div></li>
+							<li class="state-wt"><div class="dir-wt"><span>8</span></div></li>
+						</ul>
+					</div>
+				</div>							
+				-->																
+			</div>
+			<div class="bottom-strip">
+				<div data-panel="home" id="go-straight-home" class="go-straight-home">home</div>
+				<div class="page-up"></div>
+				<div class="page-down"></div>
+				<div class="page-left disabled"></div>
+				<div class="page-right disabled"></div>
+
+			</div>
+		</div>
+
+<!-- ************************************************************** -->
+
+		<div id="secret-menu" class="panel secret-menu">
+			<a href="#" id="go-straight-back" class="go-straight-back" data-panel="home"></a>	
+			<a href="#" class="save"></a>		
+			<div class="configuration-name-frame"></div>
+			<div class="title"><span>Secret Menu</span></div>
+			<div class="content">
+				<ul>
+					<li class="inspire-obj-to-text"><a>Show InSpire object in a new tab</a></li>
+					<li class="update-ui-working-object"><a>Update UI with loaded working object</a></li>
+				</ul>		
+			</div>
+			<div class="bottom-strip">
+				<div data-panel="home" id="go-straight-home" class="go-straight-home">home</div>
+			</div>		
+		</div>
+
+
+
+	</div>
+
+
+
+</body>
+
+
+<script src="scripts/jquery-2.1.4.min.js"></script>
+<script src="scripts/baseui.js"></script>
+<script src="scripts/passcodeui.js"></script>
+<script src="scripts/globalui.js"></script>
+<script src="scripts/configui.js"></script>
+<script src="scripts/scheduleui.js"></script>
+<script src="scripts/preemptui.js"></script>
+<script src="scripts/manualui.js"></script>
+<script src="scripts/settingsui.js"></script>
+<script src="scripts/validateui.js"></script>
+<script src="scripts/configValidator/configcompatibility.js"></script>
+
+
+</html>

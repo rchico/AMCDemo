@@ -1,0 +1,101 @@
+#preempt-list {
+        .content {
+    	    height: 355px;
+    	    top: 65px;
+    	    
+    	    ul {
+    	        li {
+                	height: 42px;
+                	width: 100%;
+                	border-bottom: 1px dotted #6e6e6e; 
+                	text-indent: 35px;
+                	&.rr {
+                	    text-indent: 30px;
+                	    
+                        &::after { 
+                            content: " rr ";
+                        }                	    
+                	}    
+                	
+                	.status {
+                     	float: left;
+                    	height: 24px;
+                    	width: 24px;
+                    	margin-left: 6px;
+                        margin-top: 8px;
+                        border: 1px solid red;               	    
+                	}    
+    	        }     
+    	    }   
+    	    .list {
+    	        position: absolute;
+    	        width: 100%;
+    	        top: 0;
+
+                .evp {
+                    span.preempt-icon::after {
+                        content: "EVP";
+                        line-height: 42px;
+                    }    
+                } 
+                .rr {
+                    span.preempt-icon::after {
+                        content: "RR"; 
+                        line-height: 42px;
+                    }    
+                }
+                .tsp {
+                    span.preempt-icon::after {
+                        content: "TSP"; 
+                        line-height: 42px;
+                    }    
+                }      	        
+                 .enabled {
+                    span.preempt-enabled::after {
+                        content: "Enabled"; 
+                    }    
+                }     	        
+    	        
+    	        .preempt-label {
+    	            padding: 10px;
+    	            width: 400px;
+    	            display: block;
+    	            float: left;
+    	        }
+    	        .preempt-icon {
+    	            width: 50px;
+    	            height: 40px;
+    	            display: block;
+    	            float: left;
+    	        }
+    	        .preempt-enabled {
+    	            padding: 10px;
+    	            width: 50px;
+    	            display: block;
+    	            float: left;
+    	            text-transform: uppercase;
+    	            font-size: 14px;
+    	        }    	        
+    	    }      
+        }    
+}
+
+
+
+.preempt-list .content ul li.inverse a {
+	background-color: @inverse-color;
+	color: #ffffff;
+}
+
+.preempt-list .content ul li a[data-config-name] {
+	display: inline-block;
+	font-size: 18px;
+	padding: 10px;
+	width: 700px;
+	text-decoration: none;
+	float: left;
+	border: 1px solid red;
+}
+
+
+

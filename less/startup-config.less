@@ -1,0 +1,37 @@
+#startup-config-def {
+    .content {
+        background-color: @content-background;
+        .current-settings {
+            background-color: #ffffff; 
+        }    
+    }    
+    .overlay.timing {
+     .keypad {
+            li[data-keypad-num='.'] {
+                visibility: visible;   
+            }    
+        }     
+    }        
+    .startup-state {
+        ul {
+            li {
+                width: 100%;
+                &.all-red {
+                    span::after {
+                        content: "All Red";
+                    }    
+                }   
+                &.cabinet-flash {
+                    span::after {
+                        content: "Cabinet Flash";
+                    }    
+                }
+                span {
+                    text-align: left;
+                    text-indent: 20px;
+                }    
+            }    
+        }    
+    }    
+}
+

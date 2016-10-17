@@ -1,0 +1,48 @@
+#config-ped-phase-def {
+    
+  .overlay.timing {
+ 
+    .new-timing {
+        .value {
+            span {
+                font-size: 48px;
+                font-family: 'Lato';
+            }    
+        }    
+    }    
+  }   
+    
+    .current-settings.recall ul li span {
+        font-size: 22px;   
+    }
+    .current-settings {
+        &.recall {
+         ul {
+            li {
+              &.min:after {
+                content: "min";    
+              }  
+              &.max:after {
+                content: "max";    
+              }
+              &.soft:after {
+                content: "soft";    
+              }
+              &.none:after {
+                content: " - ";    
+              }                
+            }    
+         }    
+        }
+        &.yellow-timing {
+            ul {
+                li {
+                    &.inverse {
+                        background-color: @inverse-color;
+                        color: #ffffff;
+                    }    
+                }    
+            }    
+        }    
+    }    
+}   

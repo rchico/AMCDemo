@@ -1,0 +1,217 @@
+#schedule-overview {
+
+    .overlay.schedule-config-default {
+        .weekday-selection {
+            position: absolute;
+            left: 100px;
+            top: 100px;
+            
+            label {
+                text-transform: uppercase;
+                font-size: 14px;
+            }
+            
+            div > span {
+                position: absolute;
+                font-size: 42px;
+                left: 20px;
+                top: 25px;
+            }    
+            
+            .increment {
+                left: 130px;
+                top: 15px;
+            } 
+            .decrement {
+                left: 130px;
+                top: 52px;
+            }             
+        }   
+        .start-time-selection {
+            position: absolute;
+            left: 100px;
+            top: 200px;
+            
+            label {
+                text-transform: uppercase;
+                font-size: 14px;
+            }
+            
+            div > span {
+                position: absolute;
+                font-size: 42px;
+                left: 20px;
+                top: 25px;
+            }    
+            
+            .increment {
+                left: 130px;
+                top: 15px;
+            } 
+            .decrement {
+                left: 130px;
+                top: 52px;
+            }           
+            
+            .start-time-hour {
+                .increment, .decrement {
+                    left: 0;   
+                }
+                span {
+                   left: 38px;
+
+                }    
+            }
+            .start-time-min {
+                position: absolute;
+                top: 0;
+                left: 80px;
+                .increment, .decrement {
+                    left: 75px;
+                }                
+                
+            }    
+        }  
+        .end-time-selection {
+            position: absolute;
+            left: 350px;
+            top: 200px;
+            
+            label {
+                text-transform: uppercase;
+                font-size: 14px;
+            }
+            
+            div > span {
+                position: absolute;
+                font-size: 42px;
+                left: 20px;
+                top: 25px;
+            }    
+            
+            .increment {
+                left: 130px;
+                top: 15px;
+            } 
+            .decrement {
+                left: 130px;
+                top: 52px;
+            }           
+            
+            .end-time-hour {
+                .increment, .decrement {
+                    left: 0;   
+                }
+                span {
+                   left: 40px; 
+                }    
+            }
+            .end-time-min {
+                position: absolute;
+                top: 0;
+                left: 80px;
+                .increment, .decrement {
+                    left: 75px;
+                }                
+                
+            }    
+        }          
+        .configuration-selection {
+            position: absolute;
+            left: 90px;
+            top: 190px;
+            
+            label {
+                text-transform: uppercase;
+                font-size: 14px;
+            }
+            
+            div > span {
+                position: absolute;
+                font-size: 42px;
+                left: 20px;
+                top: 25px;
+                width: 570px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }    
+            
+            .increment {
+                left: 600px;
+                top: 15px;
+            } 
+            .decrement {
+                left: 600px;
+                top: 52px;
+            }             
+        }           
+    }    
+
+    .content {  
+        ul {
+            width: 100%;   
+            li {
+                height: 56px;
+                width: 100%;
+                border-bottom: 1px solid #cccccc;
+                background: url('img/icon-menu-more.png') no-repeat 760px center;
+                position: relative;
+                &.no-more {
+                    background-image: none;   
+                }    
+                &.add-new-schedule {
+                    div {
+                        height: 38px;
+                        line-height: 38px;
+                        text-indent: 100px;
+                    }       
+                }    
+                
+                a {
+                    display: block; 
+                    height: 100%;
+                    line-height: 38px;
+                    text-indent: 90px;
+                    position: relative;
+                }
+               .config-name {
+                    position: absolute;
+                    top: 10px;
+                    left: 430px;
+                    width: 300px;
+                    text-transform: uppercase;
+                    font-size: 16px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;                   
+               } 
+               .weekly-day {
+                    position: absolute;
+                    left: 60px;
+                    font-size: 24px;
+                    top: 4px;   
+               }  
+               .weekly-time {
+                    position: absolute;
+                    left: 200px;
+                    font-size: 24px;
+                    top: 4px;   
+               } 
+               .add-new-schedule {
+                    position: absolute;
+                    left: 500px;
+                    top: 10px;
+                    text-transform: uppercase;
+                    font-size: 16px;    
+                    
+ 
+               }       
+            }    
+        }  
+        
+        .diff {
+            background-color: @amber-color;
+        }          
+    }
+}
+

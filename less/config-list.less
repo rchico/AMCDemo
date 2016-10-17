@@ -1,0 +1,103 @@
+#config-list {
+     .overlay {
+        &.confirm-config-delete {
+            .confirm-title {
+                font-size: 30px;
+                position: absolute;
+                top: 120px;
+                left: 40px;
+                width: 720px;
+            }
+            .confirm-subtitle {
+                position: absolute;
+                top: 170px;
+                left: 40px;
+                width: 720px;
+            }
+        }        
+    }   
+}    
+
+#config-list .content {
+	height: 355px;
+	top: 65px;
+	background-color: @content-background;
+}
+
+#config-list .content ul li {
+	height: 42px;
+	width: 100%;
+	background-color: #ffffff;
+	border-bottom: 1px dotted #6e6e6e; 
+	&.scheduled-config {
+	    a {
+	        background: transparent url('img/icon-scheduled-config.png') no-repeat 32px center;
+	    }
+	}  	
+	&.remove {
+	    display: none;   
+	}    
+	a {
+	    padding: 10px;
+	    display: block;
+	    text-indent: 60px;
+	    position: relative;
+	}
+	.copy-config {
+	       border: 1px solid #aaaaaa;
+	       top: 0;
+	       left: 650px;
+	       height: 40px;
+	       position: absolute;
+	       text-indent: 0;
+	       width: 100px;
+	}
+	.delete-config {
+	       border: 1px solid #aaaaaa;
+	       top: 0;
+	       left: 550px;
+	       height: 40px;
+	       position: absolute;
+	       text-indent: 0;
+	       width: 100px;
+	}
+	.conf-name {
+	    width: 535px;
+        display: block;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        height: 25px;
+	}
+	.conf-id {
+	    width: 35px;
+        display: block;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        height: 25px;
+        position: absolute;
+        left: 20px;
+        text-indent: 0;
+        
+	}	
+}
+
+#config-list .content ul li .status {
+    position: absolute;
+    right: 30px;
+}
+
+#config-list .content ul li.active .status::after {
+    content: "active";
+}
+
+#config-list .content ul li a[data-config-name] {
+	display: inline-block;
+	font-size: 18px;
+	padding: 10px;
+	width: 780px;
+	text-decoration: none;
+	float: left;
+}
+
+
+	

@@ -1,0 +1,132 @@
+.channel-compatibility-view {
+    .content {
+        top: 68px;
+        ul { 
+            margin-left: 3px;
+            width: 100%;;
+            li {
+                width: 50px;
+                div {
+                    text-align: center;
+                    a {
+                    border: 1px solid @frame-color;    
+                    margin-right: 2px;
+                    border-radius: 3px;
+                    width: 36px;
+                    display: block;
+                    margin-bottom: 2px;
+                    font-size: 14px; 
+                    height: 17px;
+                    background-color: #fefefe;
+                    &.diff {
+                        background-color: @amber-color;   
+                    }                       
+                    &.selected {
+                        background-color: #004a80;
+                        color: #ffffff;
+                        &.diff {
+                            background-color: #009900;
+                        }    
+                    }
+                    &.not-available {
+                        text-align: center;
+                        color: #bbbbbb;
+                        background-color: #3e3e3e !important;
+                        background-image: none;
+                    }  
+ 
+                        sup {
+                            vertical-align: baseline;
+                            position: relative;
+                            top: -3px;
+                            left: -3px;
+                            font-size: 12px;
+                            letter-spacing: -1px;
+                            &::after {
+                                content: ",";   
+                            }    
+                        }    
+                        sub {
+                            font-size: 16px;
+                            left: 0;
+                            top: -5px;
+                            position: relative;
+                            letter-spacing: -1px;
+                        }    
+                    }    
+                }   
+            } 
+                   
+
+            &.current {
+
+                li {
+                    background-color: #dedede; 
+                    a {
+                        height: 30px;
+                        line-height: 28px;
+                        font-size: 20px;   
+                        text-align: left;
+                        sup {
+                            font-size: 12px;
+                            top: -12px;
+                            left: 1px;
+                        }
+                        sub {
+                            font-size: 20px;
+                            top: -2px;
+                        }    
+                    }    
+                }    
+            }                
+        }    
+        
+        &.read-only {
+              ul {
+                li {
+                    div {
+                        a {
+                            opacity: 0.25;
+                            &.selected, &.not-available {
+                                opacity: 1;   
+                            }    
+                        }    
+                    }    
+                }    
+              }      
+        }    
+    }
+    
+    
+    
+    
+    .channel-selections { 
+        position: absolute;
+        top: 0;
+        left: 450px;
+        width: 220px;
+        color: #ffffff;
+        .label {
+            position: absolute;
+            left: 0;
+            top: 10px;
+        }
+        .value {
+            font-size: 42px;
+            position: absolute;
+            left: 100px;
+            font-family: 'Lato';
+        }
+    }
+    
+    .edit-toggle {
+        position: absolute;
+        top: 10px;
+        left: 700px;
+        width: 50px;
+        height: 40px;
+        &.on {
+            color: white;   
+        }    
+    }    
+}  

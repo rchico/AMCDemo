@@ -1,0 +1,93 @@
+.preempt-left {
+    li {
+        &.na {
+            span::after { 
+                content: "N/A";
+            }        
+        }  
+        &.pr {
+            span::after { 
+                content: "Pro";
+            }        
+        }
+        &.pe {
+            span::after { 
+                content: "Per";
+            }        
+        }
+        &.prpe {
+            span::after { 
+                content: "P/P";
+            }        
+        }          
+    }
+    
+  .overlay.timing {
+ 
+    .new-timing {
+        .value {
+            span {
+                font-size: 48px;
+                font-family: 'Lato';
+            }    
+        }    
+    }    
+
+    .keypad {
+        	width: 270px;
+        	height: 400px;
+        	margin: 0 auto;
+        	font-family: 'Lato';
+        	list-style: none;
+        	padding: 0;
+        	margin: 15px 36px 0 auto;
+            li {
+            	height: 80px;
+            	width: 80px;
+            	float: left;
+            	margin-right: 0;
+            	margin-bottom: 4px;
+            	margin-left: 0;
+            	margin-top: -3px;
+            	&[data-keypad-num='.'] {
+            	    visibility: hidden;   
+            	}    
+            	&:nth-child(3n) {
+    	           margin-right: 0;
+            	}
+            	&.disabled {
+            	    opacity: @disabled-opacity;
+            	}    
+                &.inverse a {
+                	background-color: @inverse-color;
+                	background-image: none;
+                	color: #ffffff;
+                }
+                a {
+                	height: 80px;
+                	width: 80px;
+                	position: relative;
+                	display: block;
+                	border: 1px solid @frame-color;
+                	background: transparent url('img/bg-white-70.png') repeat;	               	
+                	
+                    span {
+                    	font-size: 24px;
+                    	display: block;
+                    	margin-top: 5px;
+                    	margin-left: 10px;	
+                    }            
+                    &.backspace span {
+                        width: 50px;
+                        height: 30px;
+                        position: absolute;
+                        top: 25px;
+                        left: 8px;
+                    }
+                }
+            }
+        }    
+
+  }       
+    
+}    

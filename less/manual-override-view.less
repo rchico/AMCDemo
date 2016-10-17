@@ -1,0 +1,242 @@
+#manual-override-view {
+ 
+    .content {  
+        ul {
+            width: 100%;   
+            li {
+                height: 38px;
+                width: 100%;
+                border-bottom: 1px solid #cccccc;
+                background: url('img/icon-menu-more.png') no-repeat 760px center; 
+                &.no-more {
+                    background-image: none;   
+                }    
+                a {
+                    display: block; 
+                    height: 100%;
+                    line-height: 38px;
+                    text-indent: 90px;
+                    position: relative;
+                }
+                
+                &.override-config-name {
+                    .current-config {
+                        text-transform: uppercase;
+                        position: absolute;
+                        right: 60px;
+                        text-align: right;
+                        width: 380px;
+                    }    
+                }   
+                &.override-free-mode {
+                    &.on {
+                        .switch {
+                            background: url('img/icon-bb-switch-on.png') no-repeat center center;  
+                        }                       
+                    }    
+ 
+                }   
+                &.override-cabinet-flash {
+                    &.on {
+                        .switch {
+                            background: url('img/icon-bb-switch-on.png') no-repeat center center;  
+                        }                       
+                    }    
+                }   
+                &.override-stop-time {
+                    &.on {
+                        .switch {
+                            background: url('img/icon-bb-switch-on.png') no-repeat center center;  
+                        }                       
+                    }    
+                }                   
+                .switch {
+                    display: block;
+                    width: 46px;
+                    height: 26px;
+                    position: absolute;
+                    left: 36px;
+                    top: 6px;
+                }
+                .count {
+                    position: absolute;
+                    width: 28px;
+                    height: 28px;
+                    border-radius: 20px;
+                    background-color: #000000;
+                    color: #ffffff;
+                    text-indent: 0;
+                    text-align: center;
+                    line-height: 28px;
+                    left: 715px;
+                    top: 5px;
+                    display: none;
+                } 
+                .errors-found {
+                    position: absolute;
+                    width: 28px;
+                    height: 28px;
+                    border-radius: 20px;
+                    background-color: @red-color;
+                    color: #ffffff;
+                    text-indent: 0;
+                    text-align: center;
+                    line-height: 28px;
+                    left: 680px;
+                    top: 5px;
+                    display: none;
+                }                 
+            }    
+        }  
+        
+        .diff {
+            background-color: @amber-color;
+        }  
+        
+    }
+    
+  
+    
+}
+
+#manual-override-vehicle-phase .recalls, #manual-override-ped-phase .recalls, #manual-override-vehicle-phase .cycler {
+       .none {
+            span::after {
+                content: "_";   
+            }    
+       }  
+       .min {
+            span::after {
+                content: "Min";   
+            }    
+       } 
+       .max {
+            span::after {
+                content: "Max";   
+            }    
+       }    
+       .soft {
+            span::after {
+                content: "Soft";   
+            }    
+       }         
+       
+       .label .cycler {
+            span {
+                text-align: center;
+                font-size: 18px;
+                margin-top: 10px;
+                text-transform: uppercase;
+            }    
+       }
+       .values li {
+            span {
+                text-align: center;
+                font-size: 18px;
+                text-transform: uppercase;
+            }    
+       }   
+}    
+
+#manual-override-vehicle-phase {
+     .overlay {
+        background-color: #ffffff;   
+          .options-radio {
+            position: absolute;
+            left: 70px;
+            top: 90px; 
+            ul {
+                li {
+                    width: 110px;
+                    height: 200px;
+                    border: 1px solid #dedede;
+                    position: relative;
+                    margin-left: -1px;
+                    span {
+                        position: absolute;
+                        bottom: 20px;
+                        width: 100%;
+                        text-align: center;
+                    }
+                &.active {
+                        background-color: @inverse-color;
+                    }
+                }    
+            }
+            
+        }         
+        .set {
+            border: 1px solid red;   
+        	width: 65px;
+        	height: 60px;
+        
+        	position: absolute;
+        	top: 355px;
+        	right: 5px;
+        }
+        .cancel {
+            border: 1px solid blue;   
+        }
+        
+    }    
+}    
+
+
+#manual-override-config-name {
+    .config-selection {
+            label {
+                padding: 10px;
+                display: block;
+            }    
+            ul {
+                height: 264px;
+                overflow: hidden;
+                li {
+                    width: 100%;
+                    a {
+                        border-bottom: 1px solid #cccccc;   
+                        display: block;
+                        padding: 10px;
+                        &.on {
+                            background-color: @amber-color;
+                            color: #ffffff;
+                        }    
+                    }    
+                }    
+            }    
+
+        .diff {
+            background-color: @amber-color;
+        } 
+
+        }     
+}    
+
+.man-ovr {
+    &.read-only {
+        .content {
+            background-color: #dddddd;
+            opacity: 0.5;
+        }    
+    }    
+    .set.disabled {
+        opacity: 0.25;    
+    }   
+    
+    .label {
+        // .switch, .cycler {
+        //     left: -55px;   
+        // } 
+        &.toggle-all-control {
+            //  .switch, .cycler {
+            //     left: 0;   
+            // }            
+        }    
+    }    
+}    
+
+.manual-override-reload {
+    &.disabled {
+        opacity: 0.25;
+    }    
+}    
